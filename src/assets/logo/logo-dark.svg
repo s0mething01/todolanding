@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="270.964" height="71.118" viewBox="0 0 270.964 71.118">
+  <g id="logo-dark" transform="translate(-8645 1909)">
+    <text id="ToDo." transform="translate(8645 -1856)" fill="#057af0" font-size="71" font-family="Overpass-Black, Overpass" font-weight="800"><tspan x="0" y="0">To</tspan><tspan y="0" fill="#0559ae">Do.</tspan></text>
+    <g id="Group_242" data-name="Group 242" transform="translate(14.863 267)">
+      <g id="Group_200" data-name="Group 200" transform="translate(8825.526 -2176)">
+        <path id="check-solid" d="M25.669,120.349,1.107,95.787a3.779,3.779,0,0,1,0-5.344L6.451,85.1a3.779,3.779,0,0,1,5.344,0l16.546,16.546L63.781,66.2a3.779,3.779,0,0,1,5.344,0l5.344,5.344a3.779,3.779,0,0,1,0,5.344L31.013,120.349a3.779,3.779,0,0,1-5.344,0Z" transform="translate(0 -50.338)" fill="#044182"/>
+        <path id="check-solid-2" data-name="check-solid" d="M25.669,120.349,1.107,95.787a3.779,3.779,0,0,1,0-5.344L6.451,85.1a3.779,3.779,0,0,1,5.344,0l16.546,16.546L63.781,66.2a3.779,3.779,0,0,1,5.344,0l5.344,5.344a3.779,3.779,0,0,1,0,5.344L31.013,120.349a3.779,3.779,0,0,1-5.344,0Z" transform="translate(0 -57.718)" fill="#0559ae"/>
+        <path id="check-solid-3" data-name="check-solid" d="M25.669,120.349,1.107,95.787a3.779,3.779,0,0,1,0-5.344L6.451,85.1a3.779,3.779,0,0,1,5.344,0l16.546,16.546L63.781,66.2a3.779,3.779,0,0,1,5.344,0l5.344,5.344a3.779,3.779,0,0,1,0,5.344L31.013,120.349a3.779,3.779,0,0,1-5.344,0Z" transform="translate(0 -65.098)" fill="#057af0"/>
+      </g>
+    </g>
+  </g>
+</svg>

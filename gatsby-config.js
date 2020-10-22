@@ -14,7 +14,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-layout',
       options: {
-        component: require.resolve('./src/components/templates/MainTemplate/MainTemplate.js'),
+        component: require.resolve('./src/layout/Layout.js'),
       },
     },
     {
@@ -81,6 +81,16 @@ module.exports = {
         rule: {
           include: path.join(__dirname, 'src/assets'),
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Overpass`,
+          `Overpass:wght@100;300;400;700;900`, // you can also specify font weights and styles
+        ],
+        display: 'swap',
       },
     },
   ],

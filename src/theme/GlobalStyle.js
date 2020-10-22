@@ -1,16 +1,16 @@
 import { createGlobalStyle } from 'styled-components';
-import 'vendors/normalize.css';
 
 const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-size: 62.5%;
+    font-family: 'Overpass', sans-serif;
   }
   
   *,
   *::before,
   *::after {
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
   
   body {
@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
     font-size: 1.6rem;
+    padding: 0;
   }
   
   h1, h2, h3, h4, h5, span {
