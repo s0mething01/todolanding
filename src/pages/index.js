@@ -1,5 +1,12 @@
 import React from 'react';
+import HeroHeader from 'components/HeroHeader/HeroHeader';
+import Intro from 'components/Intro/Intro';
 
-const IndexPage = () => <p>Hello Rdadasdaoman</p>;
+const IndexPage = () => (
+  <>
+    <HeroHeader />
+    <Intro />
+  </>
+);
 
 export default IndexPage;
