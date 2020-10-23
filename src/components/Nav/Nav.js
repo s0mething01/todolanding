@@ -22,25 +22,25 @@ const NavContainer = styled.nav`
   color: ${({ theme }) => theme.colors.white};
   justify-content: space-between;
   align-items: center;
-  padding: 30px 60px;
+  padding: 20px 40px;
   position: fixed;
   top: 0;
   width: 100%;
   svg {
-    height: 40px;
+    height: 30px;
     width: auto;
   }
   ul {
     display: flex;
     align-items: center;
     li {
-      padding: 10px 30px;
-      font-size: ${({ theme }) => theme.font.M};
+      padding: 10px 15px;
+      font-size: ${({ theme }) => theme.font.S};
       cursor: pointer;
       &.special {
         background-color: ${({ theme }) => theme.colors.tetriary};
-        padding: 12px 60px;
-        margin-left: 30px;
+        padding: 8px 50px;
+        margin-left: 15px;
         border-radius: ${({ theme }) => theme.borderRadius};
         font-weight: ${({ theme }) => theme.font.bold};
       }
