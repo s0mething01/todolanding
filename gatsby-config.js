@@ -68,7 +68,7 @@ module.exports = {
         assets: path.join(__dirname, 'src/assets'),
         // routes: path.join(__dirname, 'src/routes'),
         vendors: path.join(__dirname, 'src/vendors'),
-        // utils: path.join(__dirname, 'src/utils'),
+        utils: path.join(__dirname, 'src/utils'),
         // contexts: path.join(__dirname, 'src/contexts'),
         // providers: path.join(__dirname, 'src/providers'),
         // hooks: path.join(__dirname, 'src/hooks'),
