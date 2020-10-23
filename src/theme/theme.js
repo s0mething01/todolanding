@@ -10,10 +10,10 @@ export const colors = {
 };
 
 export const font = {
-  XL: '6rem',
-  L: '4.5rem',
-  M: '2.3rem',
-  S: '2rem',
+  XL: '4.5rem',
+  L: '3.2rem',
+  M: '1.7rem',
+  S: '1.4rem',
   light: '300',
   normal: '400',
   bold: '900',
