@@ -4,9 +4,11 @@ export const colors = {
   secondary: 'rgba(2,79,161,1)',
   tetriary: 'rgba(23,38,65,1)',
   gradientLightFirst: 'rgba(5,122,240,1)',
-  gradientLightSecond: 'rgba(0,7,141,1)',
+  gradientLightSecond: 'rgba(0,70,141,1)',
   gradientDarkSecond: 'rgba(23,38,65,1)',
   gradientDarkFirst: 'rgba(7,62,119,1)',
+  gradientLight: 'linear-gradient(to bottom right,rgba(5,122,240,1),rgba(0,70,141,1))',
+  gradientDark: 'linear-gradient(to bottom right,rgba(7,62,119,1),rgba(23,38,65,1))',
 };
 
 export const font = {
