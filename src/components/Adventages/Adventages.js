@@ -31,7 +31,7 @@ const data = [
 
 const Adventages = () => {
   return (
-    <Section bgcolor="primary">
+    <Section bgcolor="primary" isLogo>
       <CardWrapper>
         {data.map(({ title, text, icon }) => (
           <AdventagesCard key={title}>
