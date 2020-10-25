@@ -4,7 +4,7 @@ const Paragraph = styled.p`
   color: ${({ theme }) => theme.colors.primary};
   font-size: ${({ theme }) => theme.font.M};
   text-align: ${({ isCentered }) => (isCentered ? 'center' : 'left')};
-  line-height: 25px;
+  line-height: ${({ theme }) => theme.font.lineHeightM};
   letter-spacing: -0.5px;
 `;
 

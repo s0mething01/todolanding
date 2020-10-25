@@ -7,7 +7,11 @@ const HeroHeader = () => {
   return (
     <HeroHeaderWrapper>
       <section>
-        <h1>Bring your family a time that you had not got before.</h1>
+        <h1>
+          Bring your family a time
+          <br />
+          that you had not got before.
+        </h1>
         <p>With ToDo app you will dive into the world of done. App you will dive into the world of done. You will.</p>
       </section>
       <Blob className="blob" />
@@ -22,38 +26,41 @@ const HeroHeaderWrapper = styled.header`
     flex-direction: column;
     justify-content: center;
     padding: 40px 80px;
+    height: 70vh;
     .blob {
         position: absolute;
         top: 0;
         right: 0;
         z-index: -1;
-        width: 55%;
-        height: auto;
+        width: auto;
+        height: 70%;
+        bottom: 0;
     }
     .headerSvg {
         position: absolute;
-        top: 18%;
-        right: 5%;
+        top: 14%;
+        right: 6%;
         z-index: -1;
-        width: 28%;
+        width:28%;
         height: auto;
     }
     section {
         padding: 20vh 0;
-        max-width: 490px;
+        max-width: 600px;
         h1 {
             color: ${({ theme }) => theme.colors.secondary};
-            font-size: 4.1rem;
+            font-size: ${({ theme }) => theme.font.XL};
             letter-spacing: -1.5px;
             word-spacing: 4px;
             font-weight: ${({ theme }) => theme.font.bold};
         }
         p {
             color: ${({ theme }) => theme.colors.primary};
-            font-size: 1.9rem;
+            font-size: ${({ theme }) => theme.font.M};
             margin-top: 30px;
             font-weight: 400;
             letter-spacing: .5px;
+            line-height: ${({ theme }) => theme.font.lineHeightM}
             /* font-weight: ${({ theme }) => theme.font.bold}; */
         }
     }

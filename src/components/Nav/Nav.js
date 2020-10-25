@@ -35,7 +35,7 @@ const NavContainer = styled.nav`
     align-items: center;
     li {
       padding: 10px 15px;
-      font-size: ${({ theme }) => theme.font.S};
+      font-size: ${({ theme }) => theme.font.M};
       cursor: pointer;
       &.special {
         background-color: ${({ theme }) => theme.colors.tetriary};

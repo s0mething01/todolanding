@@ -22,7 +22,7 @@ const SectionWrapper = styled.section`
   position: relative;
   margin: 25px 0 125px;
   & > div {
-    max-width: 1024px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 25px 0;
   }

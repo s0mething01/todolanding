@@ -12,13 +12,17 @@ export const colors = {
 };
 
 export const font = {
-  XL: '4.5rem',
-  L: '2.5rem',
-  M: '1.6rem',
-  S: '1.4rem',
+  XXL: '5.5rem',
+  XL: '4.1rem',
+  L: '3.5rem',
+  M: '2.1rem',
+  S: '1.8rem',
   light: '300',
   normal: '400',
   bold: '900',
+  lineHeightL: '45px',
+  lineHeightM: '35px',
+  lineHeightS: '30px',
 };
 
 export const theme = {

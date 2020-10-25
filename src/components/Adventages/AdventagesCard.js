@@ -20,9 +20,9 @@ const CardWrapper = styled.article`
     font-weight: ${({ theme }) => theme.font.bold};
   }
   p {
-    font-size: ${({ theme }) => theme.font.M};
+    font-size: ${({ theme }) => theme.font.S};
     color: ${({ theme }) => theme.colors.white};
-    line-height: 25px;
+    line-height: ${({ theme }) => theme.font.lineHeightS};
     letter-spacing: -0.5px;
     z-index: 2;
     position: relative;

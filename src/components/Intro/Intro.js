@@ -30,7 +30,7 @@ const IntroWrapper = styled.div`
   flex-direction: column;
   h2,
   p {
-    max-width: 500px;
+    max-width: 650px;
     margin: 0 auto;
   }
   p {
