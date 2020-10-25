@@ -13,8 +13,8 @@ export const colors = {
 
 export const font = {
   XL: '4.5rem',
-  L: '3.2rem',
-  M: '1.7rem',
+  L: '2.5rem',
+  M: '1.6rem',
   S: '1.4rem',
   light: '300',
   normal: '400',
