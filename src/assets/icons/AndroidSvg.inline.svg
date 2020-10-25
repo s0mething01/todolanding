@@ -1,0 +1,26 @@
+<svg id="AndroidSvg.inline" xmlns="http://www.w3.org/2000/svg" width="39.975" height="50.498" viewBox="0 0 39.975 50.498">
+  <g id="Group_384" data-name="Group 384" transform="translate(0 0)">
+    <g id="android_1_" data-name="android (1)" transform="translate(0 0)">
+      <g id="Group_387" data-name="Group 387" transform="translate(8.416 18.939)">
+        <g id="Group_386" data-name="Group 386">
+          <path id="Path_566" data-name="Path 566" d="M160.775,192.034H139.735a1.052,1.052,0,0,0-1.052,1.052v16.832a5.269,5.269,0,0,0,4.208,5.155v5.365a3.156,3.156,0,1,0,6.312,0v-5.26h2.1v5.26a3.156,3.156,0,0,0,6.312,0v-5.365a5.267,5.267,0,0,0,4.208-5.155V193.086A1.051,1.051,0,0,0,160.775,192.034Z" transform="translate(-138.683 -192.034)" fill="#cbe1fa"/>
+        </g>
+      </g>
+      <g id="Group_389" data-name="Group 389" transform="translate(8.416)">
+        <g id="Group_388" data-name="Group 388">
+          <path id="Path_567" data-name="Path 567" d="M155.762,5.606l1.774-4.138A1.051,1.051,0,1,0,155.6.64l-1.774,4.141a11.465,11.465,0,0,0-7.141,0L144.91.64a1.05,1.05,0,1,0-1.931.827l1.774,4.138a11.58,11.58,0,0,0-6.068,10.177,1.052,1.052,0,0,0,1.052,1.052h21.039a1.052,1.052,0,0,0,1.052-1.052A11.582,11.582,0,0,0,155.762,5.606Zm-9.714,7.021a1.052,1.052,0,1,1,1.052-1.052A1.052,1.052,0,0,1,146.048,12.626Zm8.416,0a1.052,1.052,0,1,1,1.052-1.052A1.052,1.052,0,0,1,154.464,12.626Z" transform="translate(-138.684 0.001)" fill="#cbe1fa"/>
+        </g>
+      </g>
+      <g id="Group_391" data-name="Group 391" transform="translate(33.663 18.939)">
+        <g id="Group_390" data-name="Group 390">
+          <path id="Path_568" data-name="Path 568" d="M397.84,192.034a3.16,3.16,0,0,0-3.156,3.156v10.52a3.156,3.156,0,0,0,6.312,0V195.19A3.16,3.16,0,0,0,397.84,192.034Z" transform="translate(-394.684 -192.034)" fill="#cbe1fa"/>
+        </g>
+      </g>
+      <g id="Group_393" data-name="Group 393" transform="translate(0 18.939)">
+        <g id="Group_392" data-name="Group 392">
+          <path id="Path_569" data-name="Path 569" d="M56.506,192.034a3.16,3.16,0,0,0-3.156,3.156v10.52a3.156,3.156,0,0,0,6.312,0V195.19A3.16,3.16,0,0,0,56.506,192.034Z" transform="translate(-53.35 -192.034)" fill="#cbe1fa"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

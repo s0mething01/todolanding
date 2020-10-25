@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <g id="logoSmallDark.inline" transform="translate(-8775.097 2234.903)">
+    <rect id="Rectangle_140" data-name="Rectangle 140" width="60" height="60" rx="6" transform="translate(8775.097 -2234.903)" fill="#172641"/>
+    <g id="Group_209" data-name="Group 209" transform="translate(8785.487 -2223.376)">
+      <g id="Group_200" data-name="Group 200" transform="translate(0 0)">
+        <path id="check-solid" d="M13.321,93.77.575,81.024a1.961,1.961,0,0,1,0-2.773l2.773-2.773a1.961,1.961,0,0,1,2.773,0l8.586,8.586L33.1,65.673a1.961,1.961,0,0,1,2.773,0l2.773,2.773a1.961,1.961,0,0,1,0,2.773L16.094,93.77a1.961,1.961,0,0,1-2.773,0Z" transform="translate(0 -57.438)" fill="#044182"/>
+        <path id="check-solid-2" data-name="check-solid" d="M13.321,93.77.575,81.024a1.961,1.961,0,0,1,0-2.773l2.773-2.773a1.961,1.961,0,0,1,2.773,0l8.586,8.586L33.1,65.673a1.961,1.961,0,0,1,2.773,0l2.773,2.773a1.961,1.961,0,0,1,0,2.773L16.094,93.77a1.961,1.961,0,0,1-2.773,0Z" transform="translate(0 -61.268)" fill="#0559ae"/>
+        <path id="check-solid-3" data-name="check-solid" d="M13.321,93.77.575,81.024a1.961,1.961,0,0,1,0-2.773l2.773-2.773a1.961,1.961,0,0,1,2.773,0l8.586,8.586L33.1,65.673a1.961,1.961,0,0,1,2.773,0l2.773,2.773a1.961,1.961,0,0,1,0,2.773L16.094,93.77a1.961,1.961,0,0,1-2.773,0Z" transform="translate(0 -65.098)" fill="#057af0"/>
+      </g>
+    </g>
+  </g>
+</svg>
