@@ -28,9 +28,9 @@ const SectionWrapper = styled.section`
   }
   .logo {
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     right: 30px;
-    height: 30px;
+    height: 40px;
     width: auto;
   }
 `;
