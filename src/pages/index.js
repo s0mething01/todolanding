@@ -6,8 +6,8 @@ import Pricing from 'components/Pricing/Pricing';
 import AdditionalInfo from 'components/AdditionalInfo/AdditionalInfo';
 import Knowledge from 'components/Knowledge/Knowledge';
 import Features from 'components/Features/Features';
-
-import Platforms from '../components/Platforms/Platforms';
+import Platforms from 'components/Platforms/Platforms';
+import StepSection from 'components/StepsSection/StepSection';
 
 const IndexPage = () => (
   <>
@@ -16,6 +16,7 @@ const IndexPage = () => (
     <Adventages />
     <Pricing />
     <Platforms />
+    <StepSection />
     <AdditionalInfo />
     <Knowledge />
     <Features />
