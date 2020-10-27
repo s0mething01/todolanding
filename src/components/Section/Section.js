@@ -22,9 +22,12 @@ const SectionWrapper = styled.section`
   position: relative;
   margin: ${({ isFooter }) => (isFooter ? '25px 0 0 0' : '25px 0 125px')};
   & > div {
-    max-width: 1200px;
+    max-width: 120rem;
     margin: 0 auto;
-    padding: 25px 0;
+    padding: 2.5rem 0;
+    @media (min-width: 3600px) {
+      max-width: 2000px;
+    }
   }
   .logo {
     position: absolute;

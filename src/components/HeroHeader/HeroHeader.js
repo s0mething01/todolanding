@@ -22,57 +22,56 @@ const HeroHeader = () => {
 export default HeroHeader;
 
 const HeroHeaderWrapper = styled.header`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 40px 80px;
-    height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 8rem;
+  height: 70vh;
+  @media (min-width: 1921px) {
+    height: 75vh;
+  }
+  .blob {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 60%;
+    height: auto;
+    bottom: 0;
     @media (min-width: 1921px) {
-      height: 75vh;
+      width: 55%;
     }
-    .blob {
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: -1;
-        width: auto;
-        height: 70%;
-        bottom: 0;
-        @media (min-width: 1921px) {
-          height: 75%;
-        }
+  }
+  .headerSvg {
+    position: absolute;
+    top: 14%;
+    right: 6%;
+    z-index: -1;
+    width: 28%;
+    height: auto;
+    @media (min-width: 1921px) {
+      top: 16%;
+      right: 5%;
+      width: 30%;
     }
-    .headerSvg {
-        position: absolute;
-        top: 14%;
-        right: 6%;
-        z-index: -1;
-        width:28%;
-        height: auto;
-        @media (min-width: 1921px) {
-          top: 16%;
-          right: 7%;
-          width: 30%;
-        }
+  }
+  section {
+    padding: 20vh 0;
+    max-width: 55rem;
+    h1 {
+      color: ${({ theme }) => theme.colors.secondary};
+      font-size: ${({ theme }) => theme.font.XL};
+      letter-spacing: -0.15rem;
+      word-spacing: 0.4rem;
+      font-weight: ${({ theme }) => theme.font.bold};
     }
-    section {
-        padding: 20vh 0;
-        max-width: 600px;
-        h1 {
-            color: ${({ theme }) => theme.colors.secondary};
-            font-size: ${({ theme }) => theme.font.XL};
-            letter-spacing: -1.5px;
-            word-spacing: 4px;
-            font-weight: ${({ theme }) => theme.font.bold};
-        }
-        p {
-            color: ${({ theme }) => theme.colors.primary};
-            font-size: ${({ theme }) => theme.font.M};
-            margin-top: 30px;
-            font-weight: 400;
-            letter-spacing: .5px;
-            line-height: ${({ theme }) => theme.font.lineHeightM}
-            /* font-weight: ${({ theme }) => theme.font.bold}; */
-        }
+    p {
+      color: ${({ theme }) => theme.colors.primary};
+      font-size: ${({ theme }) => theme.font.M};
+      margin-top: 3rem;
+      font-weight: 400;
+      letter-spacing: 0.05rem;
+      line-height: ${({ theme }) => theme.font.lineHeightM};
     }
+  }
 `;

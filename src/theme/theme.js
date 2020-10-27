@@ -21,9 +21,9 @@ export const font = {
   light: '300',
   normal: '400',
   bold: '900',
-  lineHeightL: '45px',
-  lineHeightM: '35px',
-  lineHeightS: '30px',
+  lineHeightL: '4.5rem',
+  lineHeightM: '3.5rem',
+  lineHeightS: '3rem',
 };
 
 export const theme = {
