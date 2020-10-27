@@ -22,6 +22,7 @@ export default PlatfromButton;
 const PlatfromButtonWarpper = styled(Button)`
   margin-right: 40px;
   padding: 12px 30px;
+  min-width: 200px;
   a {
     display: flex;
     align-items: center;
@@ -33,6 +34,7 @@ const PlatfromButtonWarpper = styled(Button)`
     width: auto;
   }
   div {
+    display: flex;
     flex-direction: column;
     font-size: 1.5rem;
     text-align: left;
