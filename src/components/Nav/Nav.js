@@ -22,23 +22,23 @@ const NavContainer = styled.nav`
   color: ${({ theme }) => theme.colors.white};
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 2rem 4rem;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
   svg {
-    height: 30px;
+    height: 3.5rem;
     width: auto;
-    @media (min-width: 1921px) {
+    /* @media (min-width: 1921px) {
       height: 35px;
-    }
+    } */
   }
   ul {
     display: flex;
     align-items: center;
     li {
-      padding: 10px 15px;
+      padding: 1rem 1.5rem;
       font-size: ${({ theme }) => theme.font.M};
       cursor: pointer;
       &.special {

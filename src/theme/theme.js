@@ -29,5 +29,5 @@ export const font = {
 export const theme = {
   colors,
   font,
-  borderRadius: '6px',
+  borderRadius: '.6rem',
 };
