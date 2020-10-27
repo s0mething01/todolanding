@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Section from 'components/Section/Section';
-import Button from 'components/Button/Button';
 import PlatformButton from 'components/Platforms/PlatformButton';
+import ContactForm from 'components/ContactForm/ContactForm';
 
 import AndroidSvg from 'assets/icons/AndroidSvg.inline.svg';
 import AppleSvg from 'assets/icons/AppleSvg.inline.svg';
@@ -16,7 +16,7 @@ const Footer = () => {
       <FooterWrapper>
         <section className="content">
           <div className="headingWrapper">
-            <h3 isWhite>Kim jesteśmy?</h3>
+            <h3>Kim jesteśmy?</h3>
             <p>
               With ToDo app you will dive into the world of done house chores.With ToDo app you will dive into the world of done house chores.With ToDo app you will dive into the world of done house
               chores.
@@ -49,33 +49,7 @@ const Footer = () => {
             </div>
           </div>
         </section>
-        <ContactForm action="">
-          <div>
-            <label htmlFor="name">
-              <input type="text" name="name" id="name" />
-              <span>Name</span>
-            </label>
-          </div>
-          <div>
-            <label htmlFor="email">
-              <input type="text" name="email" id="email" />
-              <span>Email</span>
-            </label>
-          </div>
-          <div>
-            <label htmlFor="title">
-              <input type="text" name="title" id="title" />
-              <span>Title</span>
-            </label>
-          </div>
-          <div className="textarea">
-            <label htmlFor="message">
-              <textarea name="message" id="message" />
-              <span>Message</span>
-            </label>
-          </div>
-          <Button>Send message</Button>
-        </ContactForm>
+        <ContactForm />
         <h5>© 2020 Copyright Mikołaj Zienkowicz. All rights reserved.</h5>
       </FooterWrapper>
     </Section>
@@ -165,65 +139,5 @@ const SocialIcon = styled.a`
   svg {
     width: 40px;
     height: 40px;
-  }
-`;
-
-const ContactForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  div {
-    width: 100%;
-    margin-bottom: 15px;
-    label {
-      color: ${({ theme }) => theme.colors.white};
-      position: relative;
-      height: 40px;
-      flex-shrink: 0;
-      display: block;
-      span {
-        font-size: ${({ theme }) => theme.font.S};
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 40px;
-        line-height: 40px;
-        margin-top: 15px;
-      }
-    }
-    input,
-    textarea {
-      width: 100%;
-      background-color: transparent;
-      border: none;
-      border-bottom: 2px solid ${({ theme }) => theme.colors.white};
-      font-size: ${({ theme }) => theme.font.S};
-      color: ${({ theme }) => theme.colors.white};
-      height: 40px;
-      margin-top: 15px;
-      &:focus {
-        outline: none;
-      }
-    }
-    textarea {
-      resize: none;
-    }
-  }
-  .textarea {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    label {
-      width: 100%;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      textarea {
-        flex-grow: 1;
-      }
-    }
-  }
-  button {
-    margin-top: 25px;
   }
 `;
