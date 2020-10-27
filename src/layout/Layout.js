@@ -6,6 +6,7 @@ import Nav from 'components/Nav/Nav';
 
 import GlobalStyle from '../theme/GlobalStyle';
 import { theme } from '../theme/theme';
+import Footer from '../components/Footer/Footer';
 
 const MainTemplate = ({ children }) => {
   return (
@@ -15,6 +16,7 @@ const MainTemplate = ({ children }) => {
       <ThemeProvider theme={theme}>
         <Nav />
         {children}
+        <Footer />
       </ThemeProvider>
     </>
   );
