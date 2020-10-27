@@ -21,19 +21,20 @@ const CardWrapper = styled.article`
   background-image: ${({ isDark, theme }) => getGradient(theme, isDark ? 'secondary' : 'primary')};
   color: ${({ theme }) => theme.colors.white};
   border-radius: ${({ theme }) => theme.borderRadius};
-  box-shadow: 0px 0px 0px 10px ${({ theme }) => theme.colors.alphaBlue};
+  box-shadow: 0 0 0 1rem ${({ theme }) => theme.colors.alphaBlue};
   width: 28%;
   text-align: center;
-  padding: 30px 20px;
+  padding: 3rem 2rem;
   h4 {
     font-size: 2.7rem;
-    margin: 20px 0;
+    margin: 2rem 0;
   }
   p {
     font-size: ${({ theme }) => theme.font.XS};
-    line-height: 25px;
+    line-height: 2.5rem;
   }
   svg {
-    width: 50px;
+    width: 5rem;
+    height: auto;
   }
 `;

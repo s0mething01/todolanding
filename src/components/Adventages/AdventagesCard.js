@@ -10,8 +10,8 @@ export default AdventagesCard;
 const CardWrapper = styled.article`
   width: 28%;
   position: relative;
-  padding: 40px 0;
-  margin: 30px 0;
+  padding: 4rem 0;
+  margin: 3rem 0;
   h5 {
     font-size: ${({ theme }) => theme.font.L};
     color: ${({ theme }) => theme.colors.white};
@@ -23,10 +23,10 @@ const CardWrapper = styled.article`
     font-size: ${({ theme }) => theme.font.S};
     color: ${({ theme }) => theme.colors.white};
     line-height: ${({ theme }) => theme.font.lineHeightS};
-    letter-spacing: -0.5px;
+    letter-spacing: -0.05rem;
     z-index: 2;
     position: relative;
-    margin-top: 20px;
+    margin-top: 2rem;
     font-weight: ${({ theme }) => theme.font.light};
   }
   svg {
@@ -36,5 +36,6 @@ const CardWrapper = styled.article`
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    width: auto;
   }
 `;

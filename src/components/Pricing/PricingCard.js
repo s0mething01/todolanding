@@ -9,7 +9,7 @@ const PricingCard = styled.article`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 40px 80px;
+  padding: 4rem 8rem;
   font-size: ${({ theme }) => theme.font.L};
   span {
     display: block;

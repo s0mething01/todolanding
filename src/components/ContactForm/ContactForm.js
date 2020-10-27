@@ -68,11 +68,11 @@ const ContactFormWrapper = styled.form`
   justify-content: space-between;
   div {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     label {
       color: ${({ theme }) => theme.colors.white};
       position: relative;
-      height: 40px;
+      height: 4rem;
       flex-shrink: 0;
       display: block;
       &.filled span {
@@ -84,9 +84,9 @@ const ContactFormWrapper = styled.form`
         position: absolute;
         top: 0;
         left: 0;
-        height: 40px;
-        line-height: 40px;
-        margin-top: 15px;
+        height: 4rem;
+        line-height: 4rem;
+        margin-top: 1.5rem;
         transition: transform 0.1s ease;
       }
     }
@@ -95,12 +95,12 @@ const ContactFormWrapper = styled.form`
       width: 100%;
       background-color: transparent;
       border: none;
-      border-bottom: 2px solid ${({ theme }) => theme.colors.white};
+      border-bottom: 0.2rem solid ${({ theme }) => theme.colors.white};
       font-size: ${({ theme }) => theme.font.S};
       color: ${({ theme }) => theme.colors.white};
-      height: 40px;
-      margin-top: 15px;
-      line-height: 40px;
+      height: 4rem;
+      margin-top: 1.5rem;
+      line-height: 4rem;
       &:focus {
         outline: none;
       }
@@ -120,12 +120,12 @@ const ContactFormWrapper = styled.form`
       flex-direction: column;
       textarea {
         flex-grow: 1;
-        line-height: 20px;
-        padding-top: 10px;
+        line-height: 2rem;
+        padding-top: 1rem;
       }
     }
   }
   button {
-    margin-top: 10px;
+    margin-top: 1rem;
   }
 `;

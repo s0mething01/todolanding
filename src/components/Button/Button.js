@@ -5,7 +5,7 @@ const Button = styled.button`
   background-color: ${({ theme, isDark }) => (isDark ? theme.color.tetriary : theme.colors.primary)};
   font-size: ${({ theme }) => theme.font.M};
   border: none;
-  padding: 12px 30px;
+  padding: 1.2rem 3rem;
   border-radius: ${({ theme }) => theme.borderRadius};
   font-weight: ${({ theme }) => theme.font.bold};
   margin: ${({ isCentered }) => (isCentered ? '0 auto' : '0')};

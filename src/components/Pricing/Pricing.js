@@ -41,9 +41,9 @@ const PricingWrapper = styled.div`
   justify-content: space-between;
   div:first-child {
     flex-grow: 1;
-    max-width: 600px;
+    max-width: 50rem;
   }
   p {
-    margin: 20px 0;
+    margin: 2rem 0;
   }
 `;

@@ -30,9 +30,9 @@ const AdditionalInfo = () => {
 export default AdditionalInfo;
 
 const AdditionsInfoWrapper = styled.div`
-  margin: 50px 0;
+  margin: 5rem 0;
   p {
-    margin: 30px 0;
-    max-width: 1000px;
+    margin: 3rem 0;
+    max-width: 100rem;
   }
 `;

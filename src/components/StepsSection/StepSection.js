@@ -50,29 +50,31 @@ export default StepSection;
 const StepContainer = styled.section`
   display: flex;
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 5rem;
   article {
     flex-basis: 50%;
-    padding: 35px 0;
+    padding: 3.5rem 0;
     position: relative;
     svg {
       position: absolute;
       top: 50%;
+      width: 3rem;
+      height: auto;
     }
     p {
-      margin-top: 10px;
+      margin-top: 1rem;
     }
   }
   article:nth-child(even) {
     transform: translateY(50%);
-    padding-left: 50px;
+    padding-left: 5rem;
     svg {
       left: 0;
       transform: translateX(-50%);
     }
   }
   article:nth-child(odd) {
-    padding-right: 50px;
+    padding-right: 5rem;
     p {
       text-align: right;
     }

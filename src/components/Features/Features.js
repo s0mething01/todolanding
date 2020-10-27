@@ -33,13 +33,13 @@ export default Features;
 
 const FeaturesWrapper = styled.div`
   h2 {
-    max-width: 600px;
+    max-width: 60rem;
     margin: 0 auto;
   }
   .cardWrapper {
     display: flex;
     justify-content: space-between;
-    max-width: 1000px;
-    margin: 50px auto;
+    max-width: 100rem;
+    margin: 5rem auto;
   }
 `;

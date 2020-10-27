@@ -20,20 +20,17 @@ const PlatfromButton = ({ children, icon, link }) => {
 export default PlatfromButton;
 
 const PlatfromButtonWarpper = styled(Button)`
-  margin-right: 40px;
-  padding: 12px 30px;
-  min-width: 200px;
-  width: 250px;
-  @media (min-width: 1921px) {
-    width: 260px;
-  }
+  margin-right: 4rem;
+  padding: 1.2rem 3rem;
+  min-width: 20rem;
+  width: 25rem;
   a {
     display: flex;
     align-items: center;
     text-decoration: none;
   }
   svg {
-    height: 40px;
+    height: 4rem;
     width: auto;
   }
   div {
@@ -41,7 +38,7 @@ const PlatfromButtonWarpper = styled(Button)`
     flex-direction: column;
     font-size: 1.5rem;
     text-align: left;
-    padding: 0 10px;
+    padding: 0 1rem;
     font-weight: ${({ theme }) => theme.font.light};
     color: ${({ theme }) => theme.colors.alphaBlue};
     span {

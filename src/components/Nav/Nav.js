@@ -43,8 +43,8 @@ const NavContainer = styled.nav`
       cursor: pointer;
       &.special {
         background-color: ${({ theme }) => theme.colors.tetriary};
-        padding: 8px 50px;
-        margin-left: 15px;
+        padding: 0.8rem 5rem;
+        margin-left: 1.5rem;
         border-radius: ${({ theme }) => theme.borderRadius};
         font-weight: ${({ theme }) => theme.font.bold};
       }

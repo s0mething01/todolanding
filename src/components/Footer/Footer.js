@@ -60,13 +60,13 @@ export default Footer;
 
 const FooterWrapper = styled.footer`
   display: flex;
-  margin: 50px 0 100px;
+  margin: 5rem 0 10rem;
   & > h5 {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    padding: 10px;
+    padding: 1rem;
     color: ${({ theme }) => theme.colors.alphaBlue};
     font-size: 1.8rem;
     font-weight: ${({ theme }) => theme.font.light};
@@ -77,12 +77,12 @@ const FooterWrapper = styled.footer`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-right: 100px;
+    margin-right: 10rem;
     p {
-      max-width: 500px;
-      margin: 25px 0;
+      max-width: 50rem;
+      margin: 2.5rem 0;
       font-size: ${({ theme }) => theme.font.S};
-      line-height: 25px;
+      line-height: 2.5rem;
       color: ${({ theme }) => theme.colors.white};
     }
     h3 {
@@ -96,12 +96,12 @@ const FooterWrapper = styled.footer`
     .buttonWrapper {
       display: flex;
       button {
-        margin-right: 20px;
+        margin-right: 2rem;
       }
     }
     .headingWrapper {
       flex-direction: column;
-      margin-bottom: 25px;
+      margin-bottom: 2.5rem;
     }
     .contactSection {
       display: flex;
@@ -110,15 +110,15 @@ const FooterWrapper = styled.footer`
       a {
         color: white;
         font-size: ${({ theme }) => theme.font.S};
-        margin-right: 30px;
+        margin-right: 3rem;
       }
     }
     .buttonWrapper:first-of-type {
-      margin-bottom: 20px;
+      margin-bottom: 2rem;
     }
   }
   & > form {
-    width: 500px;
+    width: 50rem;
     flex-shrink: 0;
   }
 `;
@@ -128,16 +128,16 @@ const SocialIcon = styled.a`
   background-color: ${({ theme, isDark }) => (isDark ? theme.color.tetriary : theme.colors.primary)};
   font-size: ${({ theme }) => theme.font.M};
   border: none;
-  padding: 10px;
+  padding: 1rem;
   border-radius: ${({ theme }) => theme.borderRadius};
   font-weight: ${({ theme }) => theme.font.bold};
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70px;
+  width: 7rem;
   cursor: pointer;
   svg {
-    width: 40px;
-    height: 40px;
+    width: 4rem;
+    height: 4rem;
   }
 `;
