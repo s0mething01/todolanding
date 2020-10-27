@@ -5,6 +5,12 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-size: 62.5%;
     font-family: 'Overpass', sans-serif;
+    @media (min-width: 1921px) {
+      font-size: 68%;
+    }
+    @media (min-width: 3600px) {
+      font-size: 140%;
+    }
   }
   
   *,

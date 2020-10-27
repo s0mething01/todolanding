@@ -27,6 +27,9 @@ const HeroHeaderWrapper = styled.header`
     justify-content: center;
     padding: 40px 80px;
     height: 70vh;
+    @media (min-width: 1921px) {
+      height: 75vh;
+    }
     .blob {
         position: absolute;
         top: 0;
@@ -35,6 +38,9 @@ const HeroHeaderWrapper = styled.header`
         width: auto;
         height: 70%;
         bottom: 0;
+        @media (min-width: 1921px) {
+          height: 75%;
+        }
     }
     .headerSvg {
         position: absolute;
@@ -43,6 +49,11 @@ const HeroHeaderWrapper = styled.header`
         z-index: -1;
         width:28%;
         height: auto;
+        @media (min-width: 1921px) {
+          top: 16%;
+          right: 7%;
+          width: 30%;
+        }
     }
     section {
         padding: 20vh 0;

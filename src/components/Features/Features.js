@@ -39,7 +39,7 @@ const FeaturesWrapper = styled.div`
   .cardWrapper {
     display: flex;
     justify-content: space-between;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 50px auto;
   }
 `;

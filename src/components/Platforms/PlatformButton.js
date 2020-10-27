@@ -23,12 +23,15 @@ const PlatfromButtonWarpper = styled(Button)`
   margin-right: 40px;
   padding: 12px 30px;
   min-width: 200px;
+  width: 250px;
+  @media (min-width: 1921px) {
+    width: 260px;
+  }
   a {
     display: flex;
     align-items: center;
     text-decoration: none;
   }
-  width: 250px;
   svg {
     height: 40px;
     width: auto;

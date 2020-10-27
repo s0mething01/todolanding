@@ -30,6 +30,9 @@ const NavContainer = styled.nav`
   svg {
     height: 30px;
     width: auto;
+    @media (min-width: 1921px) {
+      height: 35px;
+    }
   }
   ul {
     display: flex;
