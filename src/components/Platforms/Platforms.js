@@ -9,7 +9,7 @@ import AndroidSvg from 'assets/icons/AndroidSvg.inline.svg';
 import AppleSvg from 'assets/icons/AppleSvg.inline.svg';
 import WebSvg from 'assets/icons/WebSvg.inline.svg';
 
-import PlatformButton from './PlatfromButton';
+import PlatformButton from './PlatformButton';
 
 const Platforms = () => {
   return (
