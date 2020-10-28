@@ -65,6 +65,7 @@ const StepContainer = styled.section`
       height: auto;
       @media (max-width: 540px) {
         width: 4.7rem;
+        top: 35%;
       }
     }
     p {
