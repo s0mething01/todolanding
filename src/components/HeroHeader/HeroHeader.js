@@ -26,9 +26,39 @@ const HeroHeaderWrapper = styled.header`
   flex-direction: column;
   justify-content: center;
   padding: 4rem 8rem;
-  height: 70vh;
+  height: 800px;
   @media (min-width: 1921px) {
-    height: 75vh;
+    height: 700px;
+  }
+  @media (min-width: 2300px) {
+    height: 850px;
+  }
+  @media (min-width: 3600px) {
+    height: 700px;
+  }
+  @media (max-width: 1800px) {
+    height: 650px;
+  }
+  @media (max-width: 1600px) {
+    height: 600px;
+  }
+  @media (max-width: 1400px) {
+    height: 550px;
+  }
+  @media (max-width: 1200px) {
+    height: 500px;
+  }
+  @media (max-width: 1100px) {
+    height: 420px;
+  }
+  @media (max-width: 1024px) {
+    height: 380px;
+  }
+  @media (max-width: 1024px) {
+    height: 340px;
+  }
+  @media (max-width: 850px) {
+    height: 300px;
   }
   .blob {
     position: absolute;
@@ -41,18 +71,36 @@ const HeroHeaderWrapper = styled.header`
     @media (min-width: 1921px) {
       width: 55%;
     }
+    /* @media (max-width: 1024px) {
+      display: none;
+    } */
   }
   .headerSvg {
     position: absolute;
     top: 14%;
     right: 6%;
     z-index: -1;
-    width: 28%;
+    width: 33%;
     height: auto;
     @media (min-width: 1921px) {
       top: 16%;
       right: 5%;
       width: 30%;
+    }
+    @media (max-width: 1400px) {
+      top: 12%;
+    }
+    @media (max-width: 1200px) {
+      top: 10%;
+    }
+    @media (max-width: 1024px) {
+      top: 10%;
+    }
+    @media (max-width: 1200px) {
+      top: 8%;
+    }
+    @media (max-width: 850px) {
+      top: 7%;
     }
   }
   section {
