@@ -31,10 +31,13 @@ const HeroHeaderWrapper = styled.header`
     height: 700px;
   }
   @media (min-width: 2300px) {
-    height: 850px;
+    height: 920px;
   }
-  @media (min-width: 3600px) {
-    height: 700px;
+  @media (min-width: 2700px) {
+    height: 1100px;
+  }
+  @media (min-width: 3200px) {
+    height: 1400px;
   }
   @media (max-width: 1800px) {
     height: 650px;
@@ -49,16 +52,16 @@ const HeroHeaderWrapper = styled.header`
     height: 500px;
   }
   @media (max-width: 1100px) {
+    height: 440px;
+  }
+  @media (max-width: 1024px) {
     height: 420px;
   }
-  @media (max-width: 1024px) {
-    height: 380px;
+  @media (max-width: 950px) {
+    height: 360px;
   }
-  @media (max-width: 1024px) {
-    height: 340px;
-  }
-  @media (max-width: 850px) {
-    height: 300px;
+  @media (max-width: 830px) {
+    height: 320px;
   }
   .blob {
     position: absolute;
