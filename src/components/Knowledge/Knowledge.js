@@ -41,5 +41,8 @@ const KnowledgeWrapper = styled.div`
     justify-content: space-between;
     max-width: 100rem;
     margin: 5rem auto;
+    @media (max-width: 540px) {
+      flex-direction: column;
+    }
   }
 `;

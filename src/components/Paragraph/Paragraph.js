@@ -6,6 +6,9 @@ const Paragraph = styled.p`
   text-align: ${({ isCentered }) => (isCentered ? 'center' : 'left')};
   line-height: ${({ theme }) => theme.font.lineHeightM};
   letter-spacing: -0.5px;
+  @media (max-width: 540px) {
+    text-align: center;
+  }
 `;
 
 export default Paragraph;

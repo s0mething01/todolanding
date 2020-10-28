@@ -49,5 +49,9 @@ const PlatformsWarpper = styled.div`
   }
   div {
     display: flex;
+    @media (max-width: 540px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 `;

@@ -63,6 +63,20 @@ const HeroHeaderWrapper = styled.header`
   @media (max-width: 830px) {
     height: 320px;
   }
+  @media (max-width: 768px) {
+    height: 290px;
+    padding: 4rem 3rem;
+  }
+  @media (max-width: 670px) {
+    height: 260px;
+  }
+  @media (max-width: 600px) {
+    height: 240px;
+  }
+  @media (max-width: 540px) {
+    height: 650px;
+    justify-content: flex-end;
+  }
   .blob {
     position: absolute;
     top: 0;
@@ -74,9 +88,9 @@ const HeroHeaderWrapper = styled.header`
     @media (min-width: 1921px) {
       width: 55%;
     }
-    /* @media (max-width: 1024px) {
-      display: none;
-    } */
+    @media (max-width: 540px) {
+      width: 150%;
+    }
   }
   .headerSvg {
     position: absolute;
@@ -105,10 +119,22 @@ const HeroHeaderWrapper = styled.header`
     @media (max-width: 850px) {
       top: 7%;
     }
+    @media (max-width: 768px) {
+      top: 5.5%;
+    }
+    @media (max-width: 540px) {
+      width: 80%;
+      top: 26rem;
+      right: 50%;
+      transform: translate(50%, -50%);
+    }
   }
   section {
     padding: 20vh 0;
     max-width: 55rem;
+    @media (max-width: 540px) {
+      padding: 0 0 3vh 0;
+    }
     h1 {
       color: ${({ theme }) => theme.colors.secondary};
       font-size: ${({ theme }) => theme.font.XL};

@@ -28,13 +28,30 @@ const CardWrapper = styled.article`
   h4 {
     font-size: 2.7rem;
     margin: 2rem 0;
+    @media (max-width: 540px) {
+      font-size: ${({ theme }) => theme.font.L};
+    }
   }
   p {
     font-size: ${({ theme }) => theme.font.XS};
     line-height: 2.5rem;
+    @media (max-width: 540px) {
+      font-size: ${({ theme }) => theme.font.M};
+      line-height: ${({ theme }) => theme.font.lineHeightM};
+    }
   }
   svg {
     width: 5rem;
     height: auto;
+  }
+  @media (max-width: 540px) {
+    width: 90%;
+    max-width: 240px;
+    margin-bottom: 8rem;
+    margin-right: auto;
+    margin-left: auto;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 `;

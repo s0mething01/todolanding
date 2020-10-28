@@ -24,6 +24,10 @@ const PlatfromButtonWarpper = styled(Button)`
   padding: 1.2rem 3rem;
   min-width: 20rem;
   width: 25rem;
+  @media (max-width: 540px) {
+    margin-bottom: 2rem;
+    margin-right: 0;
+  }
   a {
     display: flex;
     align-items: center;

@@ -25,6 +25,12 @@ const SectionWrapper = styled.section`
     max-width: 120rem;
     margin: 0 auto;
     padding: 2.5rem 0;
+    @media (max-width: 768px) {
+      max-width: ${({ isFooter }) => (isFooter ? '90%' : '95rem')};
+    }
+    @media (max-width: 540px) {
+      max-width: 90%;
+    }
   }
   .logo {
     position: absolute;

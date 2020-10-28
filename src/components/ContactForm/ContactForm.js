@@ -10,7 +10,6 @@ const ContactForm = () => {
   const [message, setMessage] = useState('');
 
   const handleInputChange = (e) => {
-    console.log(e.target.name);
     switch (e.target.name) {
       case 'name':
         setName(e.target.value);
@@ -88,6 +87,9 @@ const ContactFormWrapper = styled.form`
         line-height: 4rem;
         margin-top: 1.5rem;
         transition: transform 0.1s ease;
+        @media (max-width: 540px) {
+          font-size: ${({ theme }) => theme.font.M};
+        }
       }
     }
     input,
@@ -103,6 +105,9 @@ const ContactFormWrapper = styled.form`
       line-height: 4rem;
       &:focus {
         outline: none;
+      }
+      @media (max-width: 540px) {
+        font-size: ${({ theme }) => theme.font.M};
       }
     }
     textarea {

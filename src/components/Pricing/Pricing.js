@@ -39,11 +39,25 @@ const PricingWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: 540px) {
+    flex-direction: column;
+  }
   div:first-child {
     flex-grow: 1;
     max-width: 50rem;
+    @media (max-width: 540px) {
+      order: 2;
+      display: flex;
+      flex-direction: column;
+    }
   }
   p {
     margin: 2rem 0;
+  }
+
+  @media (max-width: 540px) {
+    button {
+      margin: 0 auto;
+    }
   }
 `;

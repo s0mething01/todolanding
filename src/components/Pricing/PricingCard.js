@@ -10,6 +10,9 @@ const PricingCard = styled.article`
   align-items: center;
   flex-direction: column;
   padding: 4rem 8rem;
+  @media (max-width: 540px) {
+    margin-bottom: 6rem;
+  }
   font-size: ${({ theme }) => theme.font.L};
   span {
     display: block;

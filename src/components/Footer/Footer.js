@@ -22,7 +22,7 @@ const Footer = () => {
               chores.
             </p>
           </div>
-          <div>
+          <div className="buttonsContainer">
             <div className="contactSection">
               <h3>Kontakt</h3>
               <a href="/">todo@gamil.com</a>
@@ -61,6 +61,15 @@ export default Footer;
 const FooterWrapper = styled.footer`
   display: flex;
   margin: 5rem 0 10rem;
+  @media (max-width: 540px) {
+    flex-direction: column;
+  }
+  .buttonsContainer {
+    @media (max-width: 540px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
   & > h5 {
     position: absolute;
     bottom: 0;
@@ -71,6 +80,11 @@ const FooterWrapper = styled.footer`
     font-size: 1.8rem;
     font-weight: ${({ theme }) => theme.font.light};
     opacity: 0.7;
+    @media (max-width: 540px) {
+      text-align: center;
+      width: 100%;
+      bottom: 8rem;
+    }
   }
   & > section {
     flex-grow: 1;
@@ -78,16 +92,28 @@ const FooterWrapper = styled.footer`
     flex-direction: column;
     justify-content: space-between;
     margin-right: 10rem;
+    @media (max-width: 768px) {
+      margin-right: 6rem;
+    }
+    @media (max-width: 540px) {
+      margin-right: 0;
+    }
     p {
       max-width: 50rem;
       margin: 2.5rem 0;
       font-size: ${({ theme }) => theme.font.S};
       line-height: 2.5rem;
       color: ${({ theme }) => theme.colors.white};
+      @media (max-width: 540px) {
+        font-size: ${({ theme }) => theme.font.M};
+      }
     }
     h3 {
       font-size: 2.7rem;
       color: ${({ theme }) => theme.colors.white};
+      @media (max-width: 540px) {
+        font-size: ${({ theme }) => theme.font.L};
+      }
     }
     & > div {
       display: flex;
@@ -111,15 +137,33 @@ const FooterWrapper = styled.footer`
         color: white;
         font-size: ${({ theme }) => theme.font.S};
         margin-right: 3rem;
+        @media (max-width: 540px) {
+          font-size: ${({ theme }) => theme.font.M};
+        }
+      }
+      @media (max-width: 540px) {
+        height: 18rem;
+        margin-bottom: 6rem;
       }
     }
     .buttonWrapper:first-of-type {
       margin-bottom: 2rem;
+      @media (max-width: 540px) {
+        margin-bottom: 0rem;
+      }
     }
   }
   & > form {
     width: 50rem;
     flex-shrink: 0;
+    @media (max-width: 768px) {
+      width: 37%;
+    }
+    @media (max-width: 540px) {
+      width: 100%;
+      height: 45rem;
+      margin: 5rem 0 3rem;
+    }
   }
 `;
 
@@ -139,5 +183,8 @@ const SocialIcon = styled.a`
   svg {
     width: 4rem;
     height: 4rem;
+  }
+  @media (max-width: 540px) {
+    margin-bottom: 2rem;
   }
 `;

@@ -17,6 +17,12 @@ const GlobalStyle = createGlobalStyle`
     @media (max-width: 1024px) {
       font-size: 37%;
     }
+    @media (max-width: 768px) {
+      font-size: 32%;
+    }
+    @media (max-width: 540px) {
+      font-size: 43%;
+    }
   }
   
   *,

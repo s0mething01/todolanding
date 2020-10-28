@@ -12,6 +12,10 @@ const CardWrapper = styled.article`
   position: relative;
   padding: 4rem 0;
   margin: 3rem 0;
+  @media (max-width: 540px) {
+    width: 90%;
+    max-width: 40rem;
+  }
   h5 {
     font-size: ${({ theme }) => theme.font.L};
     color: ${({ theme }) => theme.colors.white};

@@ -4,8 +4,8 @@ require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Styled Components Starter`,
-    author: `Adam Romański`,
+    title: `ToDo`,
+    author: `Mikołaj Zienkowicz`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
