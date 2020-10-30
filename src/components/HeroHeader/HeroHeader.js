@@ -74,8 +74,14 @@ const HeroHeaderWrapper = styled.header`
     height: 240px;
   }
   @media (max-width: 540px) {
-    height: 650px;
+    height: 730px;
     justify-content: flex-end;
+  }
+  @media (max-width: 450px) {
+    height: 650px;
+  }
+  @media (max-width: 350px) {
+    height: 620px;
   }
   .blob {
     position: absolute;
@@ -124,9 +130,15 @@ const HeroHeaderWrapper = styled.header`
     }
     @media (max-width: 540px) {
       width: 80%;
-      top: 26rem;
+      top: 32rem;
       right: 50%;
       transform: translate(50%, -50%);
+    }
+    @media (max-width: 450px) {
+      top: 30rem;
+    }
+    @media (max-width: 400px) {
+      top: 24rem;
     }
   }
   section {
