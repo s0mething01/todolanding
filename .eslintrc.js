@@ -28,7 +28,7 @@ module.exports = {
     'react/jsx-max-props-per-line': [
       1,
       {
-        maximum: 3,
+        maximum: 6,
       },
     ],
     'react/jsx-filename-extension': [

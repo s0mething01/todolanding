@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+
+import DatoContext from 'contexts/DatoContext';
 
 import Section from 'components/Section/Section';
 
@@ -8,19 +10,12 @@ import Heading from 'components/Heading/Heading';
 import Button from 'components/Button/Button';
 
 const AdditionalInfo = () => {
+  const { additionalinfoheading, additionalinfoparagraph } = useContext(DatoContext);
   return (
     <Section bgcolor="primary" isLogo>
       <AdditionsInfoWrapper>
-        <Heading isWhite>
-          Bring your family a time
-          <br />
-          that you had not got before.
-        </Heading>
-        <Paragraph isWhite>
-          With ToDo app you will dive into the world of done house chores.With ToDo app you will dive into the world of done house chores.With ToDo app you will dive into the world of done house
-          chores.With ToDo app you will dive into the world of done house chores.With ToDo app you will dive into the world of done house chores.With ToDo app you will dive into the world of done
-          house chores.
-        </Paragraph>
+        <Heading isWhite>{additionalinfoheading}</Heading>
+        <Paragraph isWhite>{additionalinfoparagraph}</Paragraph>
         <Button>Add reward</Button>
       </AdditionsInfoWrapper>
     </Section>

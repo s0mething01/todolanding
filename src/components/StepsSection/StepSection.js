@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+
+import DatoContext from 'contexts/DatoContext';
 
 import Section from 'components/Section/Section';
 import Heading from 'components/Heading/Heading';
@@ -9,35 +11,34 @@ import StepsSectionIcon from 'assets/icons/stepSectionIcon.inline.svg';
 import StepsSectionIconLast from 'assets/icons/stepSectionLastIcon.inline.svg';
 
 const StepSection = () => {
+  const { stepsheading, step1content, stepcontent2, stepcontent3, stepcontent4, stepcontent5 } = useContext(DatoContext);
   return (
     <Section>
-      <Heading isCentered>
-        Zarejestruj się już teraz i <br />w 5 krokach zacznij korzystać z aplikacji
-      </Heading>
+      <Heading isCentered>{stepsheading}</Heading>
       <StepContainer>
         <article>
           <Heading>Krok 1</Heading>
-          <Paragraph>With ToDo app you will dive into the world of done house chores.With ToDo app you will.</Paragraph>
+          <Paragraph>{step1content}</Paragraph>
           <StepsSectionIcon />
         </article>
         <article>
           <Heading>Krok 2</Heading>
-          <Paragraph>With ToDo app you will dive into the world of done house chores.With ToDo app you will.</Paragraph>
+          <Paragraph>{stepcontent2}</Paragraph>
           <StepsSectionIcon />
         </article>
         <article>
           <Heading>Krok 3</Heading>
-          <Paragraph>With ToDo app you will dive into the world of done house chores.With ToDo app you will.</Paragraph>
+          <Paragraph>{stepcontent3}</Paragraph>
           <StepsSectionIcon />
         </article>
         <article>
           <Heading>Krok 4</Heading>
-          <Paragraph>With ToDo app you will dive into the world of done house chores.With ToDo app you will.</Paragraph>
+          <Paragraph>{stepcontent4}</Paragraph>
           <StepsSectionIcon />
         </article>
         <article>
           <Heading>Krok 5</Heading>
-          <Paragraph>With ToDo app you will dive into the world of done house chores.With ToDo app you will.</Paragraph>
+          <Paragraph>{stepcontent5}</Paragraph>
           <StepsSectionIconLast />
         </article>
       </StepContainer>

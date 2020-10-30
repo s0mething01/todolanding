@@ -1,27 +1,30 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+
+import DatoContext from 'contexts/DatoContext';
 
 import Section from 'components/Section/Section';
 import Heading from 'components/Heading/Heading';
 import FeatureCard from 'components/FeatureCard/FeatureCard';
 
 const Features = () => {
+  const { featuresheading, featureheader1, featureparagraph1, featureheader2, featureparagraph2, featureheader3, featureparagraph3 } = useContext(DatoContext);
   return (
     <Section>
       <FeaturesWrapper>
-        <Heading isCentered>Funkcjonalności ToDo, przez które życie w domu będzie przyjemniejsze.</Heading>
+        <Heading isCentered>{featuresheading}</Heading>
         <section className="cardWrapper">
-          <FeatureCard isDark>
-            <h4>Obowiązkowość</h4>
-            <p>With ToDo app you will dive into the world of done house chores.With ToDo app yl dive into the world of done house chores.</p>
+          <FeatureCard>
+            <h4>{featureheader1}</h4>
+            <p>{featureparagraph1}</p>
           </FeatureCard>
-          <FeatureCard isDark>
-            <h4>Obowiązkowość</h4>
-            <p>With ToDo app you will dive into the world of done house chores.With ToDo app yl dive into the world of done house chores.</p>
+          <FeatureCard>
+            <h4>{featureheader2}</h4>
+            <p>{featureparagraph2}</p>
           </FeatureCard>
-          <FeatureCard isDark>
-            <h4>Obowiązkowość</h4>
-            <p>With ToDo app you will dive into the world of done house chores.With ToDo app yl dive into the world of done house chores.</p>
+          <FeatureCard>
+            <h4>{featureheader3}</h4>
+            <p>{featureparagraph3}</p>
           </FeatureCard>
         </section>
       </FeaturesWrapper>

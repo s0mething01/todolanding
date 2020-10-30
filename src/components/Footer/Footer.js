@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import Section from 'components/Section/Section';
 import PlatformButton from 'components/Platforms/PlatformButton';
@@ -7,42 +8,62 @@ import ContactForm from 'components/ContactForm/ContactForm';
 
 import AndroidSvg from 'assets/icons/AndroidSvg.inline.svg';
 import AppleSvg from 'assets/icons/AppleSvg.inline.svg';
-import Instagram from 'assets/icons/facebookIcon.inline.svg';
-import Facebook from 'assets/icons/instagramIcon.inline.svg';
+import Instagram from 'assets/icons/instagramIcon.inline.svg';
+import Facebook from 'assets/icons/facebookIcon.inline.svg';
 
 const Footer = () => {
+  const data = useStaticQuery(graphql`
+    query FooterQuery {
+      allDatoCmsPagecontent {
+        edges {
+          node {
+            authorinfoheading
+            aboutheading
+            aboutparagraph
+            address
+            appstore
+            facebook
+            googlestore
+            instagram
+            mail
+            phone
+          }
+        }
+      }
+    }
+  `);
+
+  const { aboutheading, aboutparagraph, address, appstore, facebook, googlestore, instagram, mail, phone, authorinfoheading } = data.allDatoCmsPagecontent.edges[0].node;
+
   return (
     <Section bgcolor="primary" isLogo isFooter>
       <FooterWrapper>
         <section className="content">
           <div className="headingWrapper">
-            <h3>Kim jesteśmy?</h3>
-            <p>
-              With ToDo app you will dive into the world of done house chores.With ToDo app you will dive into the world of done house chores.With ToDo app you will dive into the world of done house
-              chores.
-            </p>
+            <h3>{aboutheading}</h3>
+            <p>{aboutparagraph}</p>
           </div>
           <div className="buttonsContainer">
             <div className="contactSection">
               <h3>Kontakt</h3>
-              <a href="/">todo@gamil.com</a>
-              <a href="/">ul. Długa 64-523 Warsaw</a>
-              <a href="/">+48 324 324 534</a>
+              <a href={`mailto:${mail}`}>{mail}</a>
+              <a href="/">{address}</a>
+              <a href={`tel:${phone}`}>{phone}</a>
             </div>
             <div>
               <div className="buttonWrapper">
-                <PlatformButton link="" icon={<AndroidSvg />}>
+                <PlatformButton link={googlestore} icon={<AndroidSvg />}>
                   Google Store
                 </PlatformButton>
-                <SocialIcon href="/">
+                <SocialIcon href={instagram}>
                   <Instagram />
                 </SocialIcon>
               </div>
               <div className="buttonWrapper">
-                <PlatformButton link="" icon={<AppleSvg />}>
+                <PlatformButton link={appstore} icon={<AppleSvg />}>
                   App store
                 </PlatformButton>
-                <SocialIcon href="/">
+                <SocialIcon href={facebook}>
                   <Facebook />
                 </SocialIcon>
               </div>
@@ -50,7 +71,7 @@ const Footer = () => {
           </div>
         </section>
         <ContactForm />
-        <h5>© 2020 Copyright Mikołaj Zienkowicz. All rights reserved.</h5>
+        <h5>{authorinfoheading}</h5>
       </FooterWrapper>
     </Section>
   );

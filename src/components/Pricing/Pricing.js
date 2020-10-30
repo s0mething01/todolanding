@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+
+import DatoContext from 'contexts/DatoContext';
 
 import Section from 'components/Section/Section';
 import Paragraph from 'components/Paragraph/Paragraph';
@@ -9,23 +11,18 @@ import Button from 'components/Button/Button';
 import PricingCard from './PricingCard';
 
 const Pricing = () => {
+  const { pricingheading, pricingparagraph, pricingcost } = useContext(DatoContext);
   return (
     <Section>
       <PricingWrapper>
         <div>
-          <Heading>
-            Ciężki temat, czyli <br />
-            dlaczego to musi kosztować
-          </Heading>
-          <Paragraph>
-            With ToDo app you will dive into the world of done house chores.With ToDo app you will dive into the world of done house chores.With ToDo app you will dive into the world of done house
-            chores.
-          </Paragraph>
+          <Heading>{pricingheading}</Heading>
+          <Paragraph>{pricingparagraph}</Paragraph>
           <Button>Add reward</Button>
         </div>
         <PricingCard>
           Tylko
-          <span>8zł</span>
+          <span>{pricingcost}</span>
           /miesiąc
         </PricingCard>
       </PricingWrapper>

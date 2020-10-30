@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+
+import DatoContext from 'contexts/DatoContext';
 
 import Section from 'components/Section/Section';
 import Paragraph from 'components/Paragraph/Paragraph';
@@ -12,25 +14,20 @@ import WebSvg from 'assets/icons/WebSvg.inline.svg';
 import PlatformButton from './PlatformButton';
 
 const Platforms = () => {
+  const { platformheading, platformsparagraph, googlestore, appstore } = useContext(DatoContext);
   return (
     <Section bgcolor="secondary" isLogo>
       <PlatformsWarpper>
-        <Heading isWhite>
-          Dostępna na każdym urządzeniu,
-          <br /> telefony, tablety czy komputery
-        </Heading>
-        <Paragraph isWhite>
-          With ToDo app you will dive into the world of done house chores.With ToDo app you will dive into the world of done house chores.With ToDo app you will dive into the world of done house
-          chores. house chores.With ToDo app you will dive into e worof done house chores.
-        </Paragraph>
+        <Heading isWhite>{platformheading}</Heading>
+        <Paragraph isWhite>{platformsparagraph}</Paragraph>
         <div>
-          <PlatformButton link="" icon={<WebSvg />}>
+          <PlatformButton link="www.todofamily.com" icon={<WebSvg />}>
             Web Browser
           </PlatformButton>
-          <PlatformButton link="" icon={<AndroidSvg />}>
+          <PlatformButton link={googlestore} icon={<AndroidSvg />}>
             Google Store
           </PlatformButton>
-          <PlatformButton link="" icon={<AppleSvg />}>
+          <PlatformButton link={appstore} icon={<AppleSvg />}>
             App store
           </PlatformButton>
         </div>

@@ -1,18 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+
+import DatoContext from 'contexts/DatoContext';
+
 import Blob from '../../assets/svg/blob-header.inline.svg';
 import HeaderSvg from '../../assets/svg/headerAppPreview.inline.svg';
 
 const HeroHeader = () => {
+  const { heroheading, heroparagraph } = useContext(DatoContext);
   return (
     <HeroHeaderWrapper>
       <section>
-        <h1>
-          Bring your family a time
-          <br />
-          that you had not got before.
-        </h1>
-        <p>With ToDo app you will dive into the world of done. App you will dive into the world of done. You will.</p>
+        <h1>{heroheading}</h1>
+        <p>{heroparagraph}</p>
       </section>
       <Blob className="blob" />
       <HeaderSvg className="headerSvg" />

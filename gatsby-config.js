@@ -69,7 +69,7 @@ module.exports = {
         // routes: path.join(__dirname, 'src/routes'),
         vendors: path.join(__dirname, 'src/vendors'),
         utils: path.join(__dirname, 'src/utils'),
-        // contexts: path.join(__dirname, 'src/contexts'),
+        contexts: path.join(__dirname, 'src/contexts'),
         // providers: path.join(__dirname, 'src/providers'),
         // hooks: path.join(__dirname, 'src/hooks'),
         // helpers: path.join(__dirname, 'src/helpers'),
@@ -91,6 +91,12 @@ module.exports = {
           `Overpass:wght@100;300;400;700;900`, // you can also specify font weights and styles
         ],
         display: 'swap',
+      },
+    },
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        apiToken: process.env.DATOKEY,
       },
     },
   ],

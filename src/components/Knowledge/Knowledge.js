@@ -1,27 +1,30 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+
+import DatoContext from 'contexts/DatoContext';
 
 import Section from 'components/Section/Section';
 import Heading from 'components/Heading/Heading';
 import FeatureCard from 'components/FeatureCard/FeatureCard';
 
 const Knowledge = () => {
+  const { knowledgesheading, knowledgeheading1, knowledgeparagraph1, knowledgeheading2, knowledgeparagraph2, knowledgeheading3, knowledgeparagraph3 } = useContext(DatoContext);
   return (
     <Section>
       <KnowledgeWrapper>
-        <Heading isCentered>Czego dzieci mogą się nauczyć korzystając z ToDo.</Heading>
+        <Heading isCentered>{knowledgesheading}</Heading>
         <section className="cardWrapper">
-          <FeatureCard>
-            <h4>Obowiązkowość</h4>
-            <p>With ToDo app you will dive into the world of done house chores.With ToDo app yl dive into the world of done house chores.</p>
+          <FeatureCard isDark>
+            <h4>{knowledgeheading1}</h4>
+            <p>{knowledgeparagraph1}</p>
           </FeatureCard>
-          <FeatureCard>
-            <h4>Obowiązkowość</h4>
-            <p>With ToDo app you will dive into the world of done house chores.With ToDo app yl dive into the world of done house chores.</p>
+          <FeatureCard isDark>
+            <h4>{knowledgeheading2}</h4>
+            <p>{knowledgeparagraph2}</p>
           </FeatureCard>
-          <FeatureCard>
-            <h4>Obowiązkowość</h4>
-            <p>With ToDo app you will dive into the world of done house chores.With ToDo app yl dive into the world of done house chores.</p>
+          <FeatureCard isDark>
+            <h4>{knowledgeheading3}</h4>
+            <p>{knowledgeparagraph3}</p>
           </FeatureCard>
         </section>
       </KnowledgeWrapper>
