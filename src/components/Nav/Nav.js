@@ -1,14 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
+import gsap from 'gsap';
+
 import Logo from '../../assets/logo/logo-white.inline.svg';
 import Hamburger from '../../assets/svg/hamburger.inline.svg';
 
-const Nav = () => {
+import handleHideNav from './handleHideNav';
+import handleShowNav from './handleShowNav';
+
+const Nav = ({ theme }) => {
   const [isNavActive, setNavActivity] = useState(false);
+
+  const nav = useRef(null);
+
+  const handleToogleNav = () => {
+    const tl = gsap.timeline({ defaults: { ease: 'power4.inOut' } });
+
+    if (isNavActive) handleHideNav(tl, nav);
+    else handleShowNav(tl, nav, theme);
+
+    setNavActivity(!isNavActive);
+  };
+
   return (
-    <NavContainer className={isNavActive ? 'active' : null}>
+    <NavContainer className={isNavActive ? 'active' : null} ref={nav}>
       <Logo className="logo" />
-      <Hamburger className="hamburger" onClick={() => setNavActivity(!isNavActive)} />
+      <Hamburger className="hamburger" onClick={handleToogleNav} />
       <ul className={isNavActive ? 'active' : null}>
         <li>Start</li>
         <li>O ToDO</li>
@@ -32,9 +49,6 @@ const NavContainer = styled.nav`
   @media (max-width: 540px) {
     padding: 3rem;
     z-index: 999;
-    &.active {
-      background-color: ${({ theme }) => theme.colors.secondary};
-    }
   }
   svg.logo {
     height: 3.5rem;
@@ -48,6 +62,7 @@ const NavContainer = styled.nav`
     fill: ${({ theme }) => theme.colors.alphaBlue};
     height: 5rem;
     width: auto;
+    cursor: pointer;
     @media (max-width: 540px) {
       display: block;
     }
@@ -70,7 +85,8 @@ const NavContainer = styled.nav`
     @media (max-width: 540px) {
       position: absolute;
       bottom: 0;
-      transform: translateY(-150%);
+      top: 100%;
+      display: none;
       width: 100%;
       left: 0;
       height: 100vh;
@@ -86,10 +102,10 @@ const NavContainer = styled.nav`
           margin: 2rem 0 3rem;
         }
       }
-      &.active {
+      /* &.active {
         transform: translateY(100%);
         background-color: ${({ theme }) => theme.colors.secondary};
-      }
+      } */
     }
   }
 `;

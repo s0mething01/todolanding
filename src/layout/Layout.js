@@ -14,7 +14,7 @@ const MainTemplate = ({ children }) => {
       <Helmet lang="pl" title="ToDoFamilyApp" />
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <Nav />
+        <Nav theme={theme} />
         {children}
         <Footer />
       </ThemeProvider>
