@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import DatoContext from 'contexts/DatoContext';
 
 import Blob from '../../assets/svg/blob-header.inline.svg';
-import HeaderSvg from '../../assets/svg/headerAppPreview.inline.svg';
+import HeaderSvg from '../../assets/svg/headerAppPreview2.inline.svg';
 
 const HeroHeader = () => {
   const { heroheading, heroparagraph } = useContext(DatoContext);
@@ -129,16 +129,19 @@ const HeroHeaderWrapper = styled.header`
       top: 5.5%;
     }
     @media (max-width: 540px) {
-      width: 80%;
+      width: 90%;
       top: 32rem;
       right: 50%;
       transform: translate(50%, -50%);
     }
     @media (max-width: 450px) {
-      top: 30rem;
+      top: 28rem;
     }
     @media (max-width: 400px) {
-      top: 24rem;
+      top: 26rem;
+    }
+    @media (max-width: 350px) {
+      top: 23rem;
     }
   }
   section {

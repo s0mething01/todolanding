@@ -2,6 +2,7 @@ export const colors = {
   white: 'rgba(255,255,255,1)',
   primary: 'rgba(5,122,240,1)',
   secondary: 'rgba(2,79,161,1)',
+  secondaryWithOpacity: 'rgba(2,79,161,.9)',
   tetriary: 'rgba(23,38,65,1)',
   alphaBlue: 'rgba(203,225,250,1)',
   gradientLightFirst: 'rgba(5,122,240,1)',
