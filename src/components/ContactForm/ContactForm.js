@@ -3,58 +3,102 @@ import styled from 'styled-components';
 
 import Button from 'components/Button/Button';
 
+import regExps from './regExps';
+
 const ContactForm = () => {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [title, setTitle] = useState('');
   const [message, setMessage] = useState('');
 
+  const [isNameVal, setNameVal] = useState(true);
+  const [isEmailVal, setEmailVal] = useState(true);
+  const [isTitleVal, setTitleVal] = useState(true);
+  const [isMessageVal, setMessageVal] = useState(true);
+
+  const invalidMessage = '(uzupełnij poprawnie te pole.)';
+
   const handleInputChange = (e) => {
     switch (e.target.name) {
       case 'name':
         setName(e.target.value);
+        setNameVal(true);
         break;
       case 'email':
         setEmail(e.target.value);
+        setEmailVal(true);
         break;
       case 'title':
         setTitle(e.target.value);
+        setTitleVal(true);
         break;
       case 'message':
         setMessage(e.target.value);
+        setMessageVal(true);
         break;
       default:
         throw new Error(`There is no ${e.target.name} input in contact form`);
     }
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // let isNameValid = true;
+    // let isEmailValid = true;
+    // let isTitleValid = true;
+    // let isMessageValid = true;
+    const validation = {
+      isNameValid: true,
+      isEmailValid: true,
+      isTitleValid: true,
+      isMessageValid: true,
+    };
+
+    function setInputVal(reg, value, setState, setVal) {
+      if (!reg.test(value)) {
+        setState(false);
+        validation[setVal] = false;
+      }
+    }
+
+    setInputVal(regExps.name, name, setNameVal, 'isNameValid');
+    setInputVal(regExps.email, email, setEmailVal, 'isEmailValid');
+    setInputVal(regExps.title, title, setTitleVal, 'isTitleValid');
+    setInputVal(regExps.message, message, setMessageVal, 'isMessageValid');
+
+    if (validation.isMessageValid && validation.isNameValid && validation.isTitleValid && validation.isEmailValid) {
+      e.target.submit();
+    }
+  };
+
   return (
-    <ContactFormWrapper>
-      <div>
+    <ContactFormWrapper onSubmit={handleSubmit}>
+      <div className={isNameVal ? null : 'invalid'}>
         <label htmlFor="name" className={name ? 'filled' : null}>
-          <input type="text" name="name" id="name" value={name} onChange={handleInputChange} />
-          <span>Name</span>
+          <input type="text" required min="2" max="20" name="name" id="name" value={name} onChange={handleInputChange} />
+          <span>Name {isNameVal ? '' : invalidMessage}</span>
         </label>
       </div>
-      <div>
+      <div className={isEmailVal ? null : 'invalid'}>
         <label htmlFor="email" className={email ? 'filled' : null}>
-          <input type="mail" name="email" id="email" value={email} onChange={handleInputChange} />
-          <span>Email</span>
+          <input type="mail" required name="email" id="email" value={email} onChange={handleInputChange} />
+          <span>Email {isEmailVal ? '' : invalidMessage}</span>
         </label>
       </div>
-      <div>
+      <div className={isTitleVal ? null : 'invalid'}>
         <label htmlFor="title" className={title ? 'filled' : null}>
-          <input type="text" name="title" id="title" value={title} onChange={handleInputChange} />
-          <span>Title</span>
+          <input type="text" required min="5" max="30" name="title" id="title" value={title} onChange={handleInputChange} />
+          <span>Title {isTitleVal ? '' : invalidMessage}</span>
         </label>
       </div>
-      <div className="textarea">
+      <div className={isMessageVal ? 'textarea' : 'invalid textarea'}>
         <label htmlFor="message" className={message ? 'filled' : null}>
-          <textarea name="message" id="message" value={message} onChange={handleInputChange} />
-          <span>Message</span>
+          <textarea name="message" required min="5" max="100" id="message" value={message} onChange={handleInputChange} />
+          <span>Message {isMessageVal ? '' : invalidMessage}</span>
         </label>
       </div>
-      <Button>Send message</Button>
+      <Button type="submit">Send message</Button>
     </ContactFormWrapper>
   );
 };
@@ -68,12 +112,22 @@ const ContactFormWrapper = styled.form`
   div {
     width: 100%;
     margin-bottom: 2rem;
+    &.invalid {
+      label {
+        color: ${({ theme }) => theme.colors.error};
+      }
+      input, textarea {
+        border-color: ${({ theme }) => theme.colors.error};
+        color: ${({ theme }) => theme.colors.error};
+      }
+    }
     label {
       color: ${({ theme }) => theme.colors.white};
       position: relative;
       height: 4rem;
       flex-shrink: 0;
       display: block;
+      transition: .2s;
       &.filled span {
         transform: scale(0.75) translateY(-60%);
         transform-origin: 0% 0%;
@@ -103,6 +157,7 @@ const ContactFormWrapper = styled.form`
       height: 4rem;
       margin-top: 1.5rem;
       line-height: 4rem;
+      transition: .2s;
       &:focus {
         outline: none;
       }
@@ -133,4 +188,26 @@ const ContactFormWrapper = styled.form`
   button {
     margin-top: 1rem;
   }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-text-fill-color: white;
+    box-shadow: 0 0 0px ${({ theme }) => theme.colors.primary};
+    transition: background-color 5000s ease-in-out 0s;
+  }
+  /* input:hover,
+  textarea:hover {
+    background-color: ${({ theme }) => theme.colors.secondary};
+  }
+  input:focus,
+  textarea:focus {
+    background-color: ${({ theme }) => theme.colors.secondary};
+    outline: none;
+  } */
 `;

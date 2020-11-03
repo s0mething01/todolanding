@@ -11,6 +11,7 @@ export const colors = {
   gradientDarkFirst: 'rgba(7,62,119,1)',
   gradientLight: 'linear-gradient(to bottom right,rgba(5,122,240,1),rgba(0,70,141,1))',
   gradientDark: 'linear-gradient(to bottom right,rgba(7,62,119,1),rgba(23,38,65,1))',
+  error: '#ff4444',
 };
 
 export const font = {
