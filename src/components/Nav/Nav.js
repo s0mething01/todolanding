@@ -79,7 +79,7 @@ const NavContainer = styled.nav`
     width: 100%;
     padding: 2rem 4rem;
     @media (max-width: 540px) {
-      padding: 3rem;
+      padding: 2rem 2.6rem;
     }
   }
   @media (max-width: 540px) {
@@ -89,7 +89,7 @@ const NavContainer = styled.nav`
     height: 3.5rem;
     width: auto;
     @media (max-width: 540px) {
-      height: 5rem;
+      height: 4.2rem;
     }
   }
   svg.hamburger {
@@ -100,6 +100,7 @@ const NavContainer = styled.nav`
     cursor: pointer;
     @media (max-width: 540px) {
       display: block;
+      height: 4.2rem;
     }
   }
   li {

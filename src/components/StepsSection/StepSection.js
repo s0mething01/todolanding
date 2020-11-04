@@ -71,6 +71,9 @@ const StepContainer = styled.section`
     }
     p {
       margin-top: 1rem;
+      @media (max-width: 540px) {
+        max-height: 40px;
+      }
     }
   }
   article:nth-child(even) {

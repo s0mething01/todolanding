@@ -1,5 +1,6 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import styled from 'styled-components';
+import gsap from 'gsap';
 
 import DatoContext from 'contexts/DatoContext';
 
@@ -8,8 +9,18 @@ import HeaderSvg from '../../assets/svg/headerAppPreview2.inline.svg';
 
 const HeroHeader = () => {
   const { heroheading, heroparagraph } = useContext(DatoContext);
+
+  const hero = useRef(null);
+
+  useEffect(() => {
+    const svg = hero.current.children[2];
+
+    gsap.set(svg, { opacity: 0 });
+    gsap.to(svg, { opacity: 1, duration: 0.5, ease: 'power1.inOut', delay: 0.3 });
+  }, []);
+
   return (
-    <HeroHeaderWrapper id="header">
+    <HeroHeaderWrapper id="header" ref={hero}>
       <section>
         <h1>{heroheading}</h1>
         <p>{heroparagraph}</p>
@@ -85,6 +96,7 @@ const HeroHeaderWrapper = styled.header`
   }
   .blob {
     position: absolute;
+    opacity: 1;
     top: 0;
     right: 0;
     z-index: -1;
@@ -95,7 +107,7 @@ const HeroHeaderWrapper = styled.header`
       width: 55%;
     }
     @media (max-width: 540px) {
-      width: 150%;
+      width: 160%;
     }
   }
   .headerSvg {
@@ -105,6 +117,7 @@ const HeroHeaderWrapper = styled.header`
     z-index: -1;
     width: 33%;
     height: auto;
+    opacity: 0;
     @media (min-width: 1921px) {
       top: 16%;
       right: 5%;

@@ -158,6 +158,7 @@ const FooterWrapper = styled.footer`
         color: white;
         font-size: ${({ theme }) => theme.font.S};
         margin-right: 3rem;
+        text-decoration: underline;
         @media (max-width: 540px) {
           font-size: ${({ theme }) => theme.font.M};
         }
@@ -201,7 +202,7 @@ const SocialIcon = styled.a`
   align-items: center;
   width: 7rem;
   cursor: pointer;
-  transition: .4s;
+  transition: 0.4s;
   svg {
     width: 4rem;
     height: 4rem;

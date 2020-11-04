@@ -44,7 +44,7 @@ const PlatformsWarpper = styled.div`
     margin: 3rem 0;
     max-width: 81rem;
   }
-  div {
+  & > div {
     display: flex;
     @media (max-width: 540px) {
       flex-direction: column;

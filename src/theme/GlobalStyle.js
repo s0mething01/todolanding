@@ -56,6 +56,9 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     list-style-type: none;
   }
+  a {
+    text-decoration: none;
+  }
 `;
 
 export default GlobalStyle;

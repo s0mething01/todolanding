@@ -45,6 +45,9 @@ const PlatfromButtonWarpper = styled(Button)`
     padding: 0 1rem;
     font-weight: ${({ theme }) => theme.font.light};
     color: ${({ theme }) => theme.colors.alphaBlue};
+    @media (max-width: 540px) {
+      align-items: left;
+    }
     span {
       font-size: 2.1rem;
       font-weight: ${({ theme }) => theme.font.bold};
