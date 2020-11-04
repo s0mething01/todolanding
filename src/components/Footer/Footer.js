@@ -37,7 +37,7 @@ const Footer = () => {
 
   return (
     <Section bgcolor="primary" isLogo isFooter>
-      <FooterWrapper>
+      <FooterWrapper id="footer">
         <section className="content">
           <div className="headingWrapper">
             <h3>{aboutheading}</h3>
@@ -201,11 +201,15 @@ const SocialIcon = styled.a`
   align-items: center;
   width: 7rem;
   cursor: pointer;
+  transition: .4s;
   svg {
     width: 4rem;
     height: 4rem;
   }
   @media (max-width: 540px) {
     margin-bottom: 2rem;
+  }
+  &:hover {
+    background-color: ${({ theme, isDark }) => (isDark ? theme.color.secondary : theme.colors.secondary)};
   }
 `;

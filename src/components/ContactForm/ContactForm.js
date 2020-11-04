@@ -22,19 +22,19 @@ const ContactForm = () => {
     switch (e.target.name) {
       case 'name':
         setName(e.target.value);
-        setNameVal(true);
+        setNameVal(regExps[e.target.name].test(e.target.value));
         break;
       case 'email':
         setEmail(e.target.value);
-        setEmailVal(true);
+        setEmailVal(regExps[e.target.name].test(e.target.value));
         break;
       case 'title':
         setTitle(e.target.value);
-        setTitleVal(true);
+        setTitleVal(regExps[e.target.name].test(e.target.value));
         break;
       case 'message':
         setMessage(e.target.value);
-        setMessageVal(true);
+        setMessageVal(regExps[e.target.name].test(e.target.value));
         break;
       default:
         throw new Error(`There is no ${e.target.name} input in contact form`);
@@ -43,33 +43,8 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // let isNameValid = true;
-    // let isEmailValid = true;
-    // let isTitleValid = true;
-    // let isMessageValid = true;
-    const validation = {
-      isNameValid: true,
-      isEmailValid: true,
-      isTitleValid: true,
-      isMessageValid: true,
-    };
-
-    function setInputVal(reg, value, setState, setVal) {
-      if (!reg.test(value)) {
-        setState(false);
-        validation[setVal] = false;
-      }
-    }
-
-    setInputVal(regExps.name, name, setNameVal, 'isNameValid');
-    setInputVal(regExps.email, email, setEmailVal, 'isEmailValid');
-    setInputVal(regExps.title, title, setTitleVal, 'isTitleValid');
-    setInputVal(regExps.message, message, setMessageVal, 'isMessageValid');
-
-    if (validation.isMessageValid && validation.isNameValid && validation.isTitleValid && validation.isEmailValid) {
-      e.target.submit();
-    }
+    if (isMessageVal && isNameVal && isTitleVal && isEmailVal) e.target.submit();
+    else window.alert('Zanim wyślesz formularz wypełnij wszystkie pola!');
   };
 
   return (

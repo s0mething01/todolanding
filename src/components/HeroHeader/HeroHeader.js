@@ -9,7 +9,7 @@ import HeaderSvg from '../../assets/svg/headerAppPreview2.inline.svg';
 const HeroHeader = () => {
   const { heroheading, heroparagraph } = useContext(DatoContext);
   return (
-    <HeroHeaderWrapper>
+    <HeroHeaderWrapper id="header">
       <section>
         <h1>{heroheading}</h1>
         <p>{heroparagraph}</p>

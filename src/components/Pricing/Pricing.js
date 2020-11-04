@@ -13,7 +13,7 @@ import PricingCard from './PricingCard';
 const Pricing = () => {
   const { pricingheading, pricingparagraph, pricingcost } = useContext(DatoContext);
   return (
-    <Section>
+    <Section id="pricing">
       <PricingWrapper>
         <div>
           <Heading>{pricingheading}</Heading>

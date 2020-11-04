@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import Logo from 'assets/logo/logo-white.inline.svg';
 import getGradient from 'utils/getGradient';
 
-const Section = ({ children, bgcolor, isLogo, isFooter }) => {
+const Section = ({ children, bgcolor, isLogo, isFooter, id }) => {
   return (
-    <SectionWrapper bgcolor={bgcolor} isFooter={isFooter}>
+    <SectionWrapper bgcolor={bgcolor} isFooter={isFooter} id={id}>
       <div>
         {children}
         {isLogo && <Logo className="logo" />}

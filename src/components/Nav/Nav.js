@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 import Logo from '../../assets/logo/logo-white.inline.svg';
 import Hamburger from '../../assets/svg/hamburger.inline.svg';
@@ -20,25 +21,31 @@ const Nav = ({ theme }) => {
   }, []);
 
   const handleToogleNav = () => {
+    if(window.innerWidth > 540) return;
+
     const tl = gsap.timeline({ defaults: { ease: 'power4.inOut' } });
 
     if (isNavActive) handleHideNav(tl, nav);
     else handleShowNav(tl, nav, theme);
 
     setNavActivity(!isNavActive);
-  };
+  };;
+  
+  const onKeyPressHandler = () => {};
 
   return (
     <NavContainer className={isNavActive ? 'active' : null} ref={nav}>
       <div className="navHeading">
-        <Logo className="logo" />
+        <AnchorLink to="/#header">
+          <Logo className="logo" />
+        </AnchorLink>
         <Hamburger className="hamburger" onClick={handleToogleNav} />
       </div>
       <ul className={isNavActive ? 'active' : null}>
-        <li>Start</li>
-        <li>O ToDO</li>
-        <li>Kontakt</li>
-        <li className="special">Aplikacja</li>
+        <li onClick={handleToogleNav}><AnchorLink to="/#header">Start</AnchorLink></li>
+        <li onClick={handleToogleNav}><AnchorLink to="/#pricing">Pricing</AnchorLink></li>
+        <li onClick={handleToogleNav}><AnchorLink to="/#footer">Kontakt</AnchorLink></li>
+        <li className="special"><a href="/">Aplikacji</a></li>
       </ul>
     </NavContainer>
   );
@@ -84,10 +91,14 @@ const NavContainer = styled.nav`
     }
   }
   li {
-    padding: 1rem 1.5rem;
     font-size: ${({ theme }) => theme.font.M};
-    cursor: pointer;
-    &.special {
+    a {
+      color: ${({ theme }) => theme.colors.white};
+      text-decoration: none;
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+    }
+    &.special a {
       background-color: ${({ theme }) => theme.colors.tetriary};
       padding: 0.8rem 5rem;
       margin-left: 1.5rem;
@@ -115,10 +126,12 @@ const NavContainer = styled.nav`
       padding: 5rem 2rem 4rem;
       justify-content: flex-start;
       li {
+        margin: 2rem 0;
+      }
+      li a{
         font-size: 3rem;
         padding: 2rem 3rem;
-        margin: 1rem 0;
-        &.special {
+        &.special a  {
           margin: 2rem 0 3rem;
         }
       }
