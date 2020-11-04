@@ -4,6 +4,8 @@ import gsap from 'gsap';
 
 import DatoContext from 'contexts/DatoContext';
 
+import getGradient from 'utils/getGradient';
+
 import Blob from '../../assets/svg/blob-header.inline.svg';
 import HeaderSvg from '../../assets/svg/headerAppPreview2.inline.svg';
 
@@ -16,7 +18,7 @@ const HeroHeader = () => {
     const svg = hero.current.children[2];
 
     gsap.set(svg, { opacity: 0 });
-    gsap.to(svg, { opacity: 1, duration: 0.5, ease: 'power1.inOut', delay: 0.3 });
+    gsap.to(svg, { opacity: 1, duration: 0.4, ease: 'power1.inOut', delay: 0.1 });
   }, []);
 
   return (
@@ -27,6 +29,7 @@ const HeroHeader = () => {
       </section>
       <Blob className="blob" />
       <HeaderSvg className="headerSvg" />
+      <div className="blobMobile" />
     </HeroHeaderWrapper>
   );
 };
@@ -107,7 +110,55 @@ const HeroHeaderWrapper = styled.header`
       width: 55%;
     }
     @media (max-width: 540px) {
-      width: 160%;
+      display: none;
+    }
+  }
+  .blobMobile {
+    display: none;
+    position: absolute;
+    z-index: -2;
+    @media (max-width: 540px) {
+      display: block;
+      background-image: ${({ theme }) => getGradient(theme, 'reversePrimary')};
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 400px;
+      z-index: -2;
+      &:after {
+        content: '';
+        background-color: ${({ theme }) => theme.colors.alphaBlue};
+        width: 100%;
+        height: 22px;
+        position: absolute;
+        bottom: -22px;
+        left: 0;
+      }
+      &:before {
+        content: '';
+        background-color: ${({ theme }) => theme.colors.alphaBlue2};
+        width: 100%;
+        height: 22px;
+        position: absolute;
+        bottom: -44px;
+        left: 0;
+      }
+    }
+    @media (max-width: 500px) {
+      height: 380px;
+    }
+    @media (max-width: 450px) {
+      height: 350px;
+    }
+    @media (max-width: 400px) {
+      height: 320px;
+    }
+    @media (max-width: 360px) {
+      height: 300px;
+    }
+    @media (max-width: 350px) {
+      height: 290px;
     }
   }
   .headerSvg {

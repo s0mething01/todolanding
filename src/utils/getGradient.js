@@ -4,6 +4,8 @@ const getGradient = (theme, color) => {
       return theme.colors.gradientLight;
     case 'secondary':
       return theme.colors.gradientDark;
+    case 'reversePrimary':
+      return theme.colors.reversePrimary;
     default:
       return 'none';
   }
