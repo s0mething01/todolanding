@@ -12,6 +12,56 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `ToDo Family`,
+        short_name: `ToDo`,
+        start_url: `/`,
+        background_color: 'rgba(5,122,240,1)',
+        theme_color: 'rgba(203,225,250,1)',
+        display: `standalone`,
+        icon: `src/assets/logo/manifest/favicon-32x32.png`,
+        icons: [
+          {
+            src: 'android-icon-36x36.png',
+            sizes: '36x36',
+            type: 'image/png',
+            density: '0.75',
+          },
+          {
+            src: 'android-icon-48x48.png',
+            sizes: '48x48',
+            type: 'image/png',
+            density: '1.0',
+          },
+          {
+            src: 'android-icon-72x72.png',
+            sizes: '72x72',
+            type: 'image/png',
+            density: '1.5',
+          },
+          {
+            src: 'android-icon-96x96.png',
+            sizes: '96x96',
+            type: 'image/png',
+            density: '2.0',
+          },
+          {
+            src: 'android-icon-144x144.png',
+            sizes: '144x144',
+            type: 'image/png',
+            density: '3.0',
+          },
+          {
+            src: 'android-icon-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+            density: '4.0',
+          },
+        ],
+      },
+    },
+    {
       resolve: 'gatsby-plugin-layout',
       options: {
         component: require.resolve('./src/layout/Layout.js'),
@@ -45,56 +95,7 @@ module.exports = {
         path: `${__dirname}/src/assets`,
       },
     },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `ToDo Family`,
-        short_name: `ToDo`,
-        start_url: `/`,
-        background_color: 'rgba(5,122,240,1)',
-        theme_color: 'rgba(203,225,250,1)',
-        display: `standalone`,
-        icon: `src/assets/icons/manifest/favicon.ico`,
-        icons: [
-          {
-           src: "src/assets/icons/manifest/android-icon-36x36.png",
-           size: "36x36",
-           type: "image/png",
-           density: "0.75"
-          },
-          {
-           src: "src/assets/icons/manifest/android-icon-48x48.png",
-           sizes: "48x48",
-           type: "image/png",
-           density: "1.0"
-          },
-          {
-           src: "src/assets/icons/manifest/android-icon-72x72.png",
-           sizes: "72x72",
-           type: "image/png",
-           density: "1.5"
-          },
-          {
-           src: "src/assets/icons/manifest/android-icon-96x96.png",
-           sizes: "96x96",
-           type: "image/png",
-           density: "2.0"
-          },
-          {
-           src: "src/assets/icons/manifest//android-icon-144x144.png",
-           sizes: "144x144",
-           type: "image/png",
-           density: "3.0"
-          },
-          {
-           src: "src/assets/icons/manifest/android-icon-192x192.png",
-           sizes: "192x192",
-           type: "image/png",
-           density: "4.0"
-          }
-         ]
-      },
-    },
+
     {
       resolve: 'gatsby-plugin-root-import',
       options: {
@@ -138,10 +139,10 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-anchor-links",
+      resolve: 'gatsby-plugin-anchor-links',
       options: {
-        offset: -150
-      }
-    }
+        offset: -150,
+      },
+    },
   ],
 };

@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 import Logo from '../../assets/logo/logo-white.inline.svg';
 import Hamburger from '../../assets/svg/hamburger.inline.svg';
@@ -21,7 +21,7 @@ const Nav = ({ theme }) => {
   }, []);
 
   const handleToogleNav = () => {
-    if(window.innerWidth > 540) return;
+    if (window.innerWidth > 540) return;
 
     const tl = gsap.timeline({ defaults: { ease: 'power4.inOut' } });
 
@@ -29,9 +29,7 @@ const Nav = ({ theme }) => {
     else handleShowNav(tl, nav, theme);
 
     setNavActivity(!isNavActive);
-  };;
-  
-  const onKeyPressHandler = () => {};
+  };
 
   return (
     <NavContainer className={isNavActive ? 'active' : null} ref={nav}>
@@ -42,10 +40,24 @@ const Nav = ({ theme }) => {
         <Hamburger className="hamburger" onClick={handleToogleNav} />
       </div>
       <ul className={isNavActive ? 'active' : null}>
-        <li onClick={handleToogleNav}><AnchorLink to="/#header">Start</AnchorLink></li>
-        <li onClick={handleToogleNav}><AnchorLink to="/#pricing">Pricing</AnchorLink></li>
-        <li onClick={handleToogleNav}><AnchorLink to="/#footer">Kontakt</AnchorLink></li>
-        <li className="special"><a href="/">Aplikacji</a></li>
+        <li>
+          <button onClick={handleToogleNav}>
+            <AnchorLink to="/#header">Start</AnchorLink>
+          </button>
+        </li>
+        <li>
+          <button onClick={handleToogleNav}>
+            <AnchorLink to="/#pricing">Pricing</AnchorLink>
+          </button>
+        </li>
+        <li>
+          <button onClick={handleToogleNav}>
+            <AnchorLink to="/#footer">Kontakt</AnchorLink>
+          </button>
+        </li>
+        <li className="special">
+          <a href="/">Aplikacji</a>
+        </li>
       </ul>
     </NavContainer>
   );
@@ -92,10 +104,15 @@ const NavContainer = styled.nav`
   }
   li {
     font-size: ${({ theme }) => theme.font.M};
+    button {
+      background-color: transparent;
+      border: none;
+    }
     a {
       color: ${({ theme }) => theme.colors.white};
       text-decoration: none;
       padding: 1rem 1.5rem;
+      font-size: ${({ theme }) => theme.font.M};
       cursor: pointer;
     }
     &.special a {
