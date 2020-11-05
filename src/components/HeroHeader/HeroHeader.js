@@ -12,18 +12,22 @@ import HeaderSvg from '../../assets/svg/headerAppPreview2.inline.svg';
 const HeroHeader = () => {
   const { heroheading, heroparagraph } = useContext(DatoContext);
 
+  const section = useRef(null);
   const hero = useRef(null);
 
   useEffect(() => {
     const svg = hero.current.children[2];
+    const sectionEl = section.current;
 
     gsap.set(svg, { opacity: 0 });
+    gsap.set(sectionEl, { opacity: 0, y: -200 });
     gsap.to(svg, { opacity: 1, duration: 0.4, ease: 'power1.inOut', delay: 0.1 });
+    gsap.to(sectionEl, { opacity: 1, y: 0, duration: 0.6 });
   }, []);
 
   return (
     <HeroHeaderWrapper id="header" ref={hero}>
-      <section>
+      <section ref={section}>
         <h1>{heroheading}</h1>
         <p>{heroparagraph}</p>
       </section>
@@ -211,6 +215,7 @@ const HeroHeaderWrapper = styled.header`
   section {
     padding: 20vh 0;
     max-width: 55rem;
+    opacity: 0;
     @media (max-width: 540px) {
       padding: 0 0 3vh 0;
     }
