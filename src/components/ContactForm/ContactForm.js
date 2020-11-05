@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import Button from 'components/Button/Button';
 
+import encode from 'utils/encode';
+
 import regExps from './regExps';
 
 const ContactForm = () => {
@@ -43,8 +45,15 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (isMessageVal && isNameVal && isTitleVal && isEmailVal) e.target.submit();
-    else window.alert('Zanim wyślesz formularz wypełnij wszystkie pola!');
+
+    if (isMessageVal && isNameVal && isTitleVal && isEmailVal) {
+      const res = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({ 'form-name': 'contact', name, email, title, message }),
+      });
+      console.log(res);
+    } else window.alert('Zanim wyślesz formularz wypełnij wszystkie pola!');
   };
 
   return (

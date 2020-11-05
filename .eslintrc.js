@@ -4,11 +4,13 @@ module.exports = {
   parser: 'babel-eslint',
   env: {
     jest: true,
+    browser: true,
   },
   globals: {
     window: true,
     document: true,
     localStorage: true,
+    fetch: true,
   },
   rules: {
     'import/no-absolute-path': 0,
