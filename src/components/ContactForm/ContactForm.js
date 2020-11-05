@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { navigate } from 'gatsby';
 
 import Button from 'components/Button/Button';
 
@@ -52,7 +53,9 @@ const ContactForm = () => {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({ 'form-name': 'contact', name, email, title, message }),
       });
-      console.log(res);
+
+      if (res.ok) navigate('/success');
+      else navigate('/error');
     } else window.alert('Zanim wyślesz formularz wypełnij wszystkie pola!');
   };
 
