@@ -122,16 +122,16 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Overpass`,
-          `Overpass:wght@100;300;400;700;900`, // you can also specify font weights and styles
-        ],
-        display: 'swap',
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       `Overpass`,
+    //       `Overpass:wght@100;300;400;700;900`, // you can also specify font weights and styles
+    //     ],
+    //     display: 'swap',
+    //   },
+    // },
     {
       resolve: `gatsby-source-datocms`,
       options: {
@@ -142,6 +142,18 @@ module.exports = {
       resolve: 'gatsby-plugin-anchor-links',
       options: {
         offset: -150,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Overpass`,
+            variants: [`300`, `400`, `700`, `900`],
+            subsets: [`latin-ext`],
+          },
+        ],
       },
     },
   ],

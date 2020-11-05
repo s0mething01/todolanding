@@ -24,7 +24,7 @@ export const font = {
   S: '1.8rem',
   light: '300',
   normal: '400',
-  bold: '900',
+  bold: '700',
   lineHeightL: '4.5rem',
   lineHeightM: '3.5rem',
   lineHeightS: '3rem',
