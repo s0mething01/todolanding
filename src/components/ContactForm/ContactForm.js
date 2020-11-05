@@ -57,7 +57,8 @@ const ContactForm = () => {
   };
 
   return (
-    <ContactFormWrapper onSubmit={handleSubmit}>
+    <ContactFormWrapper onSubmit={handleSubmit} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact" />
       <div className={isNameVal ? null : 'invalid'}>
         <label htmlFor="name" className={name ? 'filled' : null}>
           <input type="text" required min="2" max="20" name="name" id="name" value={name} onChange={handleInputChange} />
