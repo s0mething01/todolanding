@@ -1,11 +1,33 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import Button from 'components/Button/Button';
 
 const PlatfromButton = ({ children, icon, link }) => {
+  const button = useRef(null);
+
+  useEffect(() => {
+    const sectionEl = button.current;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.set(sectionEl, { opacity: 0 });
+    gsap.to(sectionEl, {
+      opacity: 1,
+      delay: 0,
+      duration: 1,
+      ease: 'power2.inOut',
+      scrollTrigger: {
+        trigger: sectionEl,
+        start: 'top bottom',
+      },
+    });
+  }, []);
+
   return (
-    <PlatfromButtonWarpper>
+    <PlatfromButtonWarpper ref={button}>
       <a href={link}>
         {icon}
         <div>

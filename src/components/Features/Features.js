@@ -14,15 +14,15 @@ const Features = () => {
       <FeaturesWrapper>
         <Heading isCentered>{featuresheading}</Heading>
         <section className="cardWrapper">
-          <FeatureCard>
+          <FeatureCard cardDaley={0.3}>
             <h4>{featureheader1}</h4>
             <p>{featureparagraph1}</p>
           </FeatureCard>
-          <FeatureCard>
+          <FeatureCard cardDaley={0.6}>
             <h4>{featureheader2}</h4>
             <p>{featureparagraph2}</p>
           </FeatureCard>
-          <FeatureCard>
+          <FeatureCard cardDaley={0.9}>
             <h4>{featureheader3}</h4>
             <p>{featureparagraph3}</p>
           </FeatureCard>

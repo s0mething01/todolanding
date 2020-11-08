@@ -21,7 +21,7 @@ const HeroHeader = () => {
 
     gsap.set(svg, { opacity: 0 });
     // gsap.set(sectionEl, { opacity: 0, y: -200 });
-    gsap.to(svg, { opacity: 1, duration: 0.4, ease: 'power1.inOut', delay: 0.1 });
+    gsap.to(svg, { opacity: 1, duration: 1, ease: 'power1.inOut', delay: 0.1 });
     // gsap.to(sectionEl, { opacity: 1, y: 0, duration: 0.6 });
   }, []);
 

@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import Section from 'components/Section/Section';
 import PlatformButton from 'components/Platforms/PlatformButton';
@@ -35,6 +37,28 @@ const Footer = () => {
 
   const { aboutheading, aboutparagraph, address, appstore, facebook, googlestore, instagram, mail, phone, authorinfoheading } = data.allDatoCmsPagecontent.edges[0].node;
 
+  const socialIcon1 = useRef(null);
+  const socialIcon2 = useRef(null);
+
+  useEffect(() => {
+    const sectionEl1 = socialIcon1.current;
+    const sectionEl2 = socialIcon2.current;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.set([sectionEl1, sectionEl2], { opacity: 0 });
+    gsap.to([sectionEl1, sectionEl2], {
+      opacity: 1,
+      delay: 0,
+      duration: 1,
+      ease: 'power2.inOut',
+      scrollTrigger: {
+        trigger: sectionEl1,
+        start: 'top bottom',
+      },
+    });
+  }, []);
+
   return (
     <Section bgcolor="primary" isLogo isFooter>
       <FooterWrapper id="footer">
@@ -55,7 +79,7 @@ const Footer = () => {
                 <PlatformButton link={googlestore} icon={<AndroidSvg />}>
                   Google Store
                 </PlatformButton>
-                <SocialIcon href={instagram}>
+                <SocialIcon href={instagram} ref={socialIcon1}>
                   <Instagram />
                 </SocialIcon>
               </div>
@@ -63,7 +87,7 @@ const Footer = () => {
                 <PlatformButton link={appstore} icon={<AppleSvg />}>
                   App store
                 </PlatformButton>
-                <SocialIcon href={facebook}>
+                <SocialIcon href={facebook} ref={socialIcon2}>
                   <Facebook />
                 </SocialIcon>
               </div>
@@ -190,6 +214,7 @@ const FooterWrapper = styled.footer`
 `;
 
 const SocialIcon = styled.a`
+  opacity: 0;
   color: ${({ theme }) => theme.colors.white};
   background-color: ${({ theme, isDark }) => (isDark ? theme.color.tetriary : theme.colors.primary)};
   font-size: ${({ theme }) => theme.font.M};

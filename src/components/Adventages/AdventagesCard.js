@@ -1,33 +1,28 @@
-import React from 'react';
-// import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
-// import gsap from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const AdventagesCard = ({ children }) => {
-  // const AdventagesCard = ({ children, delay }) => {
+const AdventagesCard = ({ children, delay }) => {
+  const card = useRef(null);
 
-  // const card = useRef(null);
+  useEffect(() => {
+    const sectionEl = card.current;
+    gsap.registerPlugin(ScrollTrigger);
 
-  // useEffect(() => {
-  //   const sectionEl = card.current;
-  //   gsap.registerPlugin(ScrollTrigger);
-
-  //   gsap.set(sectionEl, { opacity: 0, y: -50 });
-  //   gsap.to(sectionEl, {
-  //     opacity: 1,
-  //     y: 0,
-  //     delay,
-  //     duration: 0.6,
-  //     scrollTrigger: {
-  //       trigger: sectionEl,
-  //       start: '-400%',
-  //       end: '-50%',
-  //     },
-  //   });
-  // }, []);
-  // return <CardWrapper ref={card}>{children}</CardWrapper>;
-  return <CardWrapper>{children}</CardWrapper>;
+    gsap.set(sectionEl, { opacity: 0, y: -50 });
+    gsap.to(sectionEl, {
+      opacity: 1,
+      y: 0,
+      delay,
+      duration: 0.8,
+      scrollTrigger: {
+        trigger: sectionEl,
+        start: 'top bottom',
+      },
+    });
+  }, []);
+  return <CardWrapper ref={card}>{children}</CardWrapper>;
 };
 
 export default AdventagesCard;

@@ -1,14 +1,37 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import getGradient from 'utils/getGradient';
 
 import Logo from 'assets/logo/logoSmall.inline.svg';
 import LogoDark from 'assets/logo/logoSmallDark.inline.svg';
 
-const FeatureCard = ({ children, isDark }) => {
+const FeatureCard = ({ children, isDark, cardDaley }) => {
+  const card = useRef(null);
+
+  useEffect(() => {
+    const sectionEl = card.current;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.set(sectionEl, { opacity: 0, y: -40 });
+    gsap.to(sectionEl, {
+      opacity: 1,
+      delay: cardDaley,
+      y: 0,
+      duration: 1.2,
+      ease: 'power2.inOut',
+      scrollTrigger: {
+        trigger: sectionEl,
+        start: 'top bottom',
+      },
+    });
+  }, []);
+
   return (
-    <CardWrapper isDark={isDark}>
+    <CardWrapper isDark={isDark} ref={card}>
       {isDark ? <LogoDark /> : <Logo />}
       {children}
     </CardWrapper>

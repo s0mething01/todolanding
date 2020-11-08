@@ -1,8 +1,7 @@
-import React, { useContext } from 'react';
-// import React, { useContext, useRef, useEffect } from 'react';
+import React, { useContext, useRef, useEffect } from 'react';
 import styled from 'styled-components';
-// import gsap from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import DatoContext from 'contexts/DatoContext';
 
@@ -16,37 +15,35 @@ import PricingCard from './PricingCard';
 const Pricing = () => {
   const { pricingheading, pricingparagraph, pricingcost } = useContext(DatoContext);
 
-  // const section = useRef(null);
+  const card = useRef(null);
 
-  // useEffect(() => {
-  //   const sectionEl = section.current;
+  useEffect(() => {
+    const sectionEl = card.current;
 
-  //   gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
 
-  //   gsap.set(sectionEl, { opacity: 0, y: -200 });
-  //   gsap.to(sectionEl, {
-  //     opacity: 1,
-  //     y: 0,
-  //     delay: 0.3,
-  //     duration: 0.6,
-  //     scrollTrigger: {
-  //       trigger: sectionEl,
-  //       start: '-300%',
-  //       end: '-10vh',
-  //     },
-  //   });
-  // }, []);
+    gsap.set(sectionEl, { opacity: 0, x: 200 });
+    gsap.to(sectionEl, {
+      opacity: 1,
+      x: 0,
+      delay: 0.3,
+      duration: 0.8,
+      scrollTrigger: {
+        trigger: sectionEl,
+        start: 'top bottom',
+      },
+    });
+  }, []);
 
   return (
     <Section id="pricing">
       <PricingWrapper>
-        {/* <div ref={section}> */}
         <div>
           <Heading>{pricingheading}</Heading>
           <Paragraph>{pricingparagraph}</Paragraph>
           <Button>Add reward</Button>
         </div>
-        <PricingCard>
+        <PricingCard ref={card}>
           Tylko
           <span>{pricingcost}</span>
           /miesiąc

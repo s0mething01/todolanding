@@ -8,21 +8,21 @@ import Heading from 'components/Heading/Heading';
 import FeatureCard from 'components/FeatureCard/FeatureCard';
 
 const Knowledge = () => {
-  const { knowledgesheading, knowledgeheading1, knowledgeparagraph1, knowledgeheading2, knowledgeparagraph2, knowledgeheading3, knowledgeparagraph3 } = useContext(DatoContext);
+  const { knowledgeheading, knowledgeheading1, knowledgeparagraph1, knowledgeheading2, knowledgeparagraph2, knowledgeheading3, knowledgeparagraph3 } = useContext(DatoContext);
   return (
     <Section>
       <KnowledgeWrapper>
-        <Heading isCentered>{knowledgesheading}</Heading>
+        <Heading isCentered>{knowledgeheading}</Heading>
         <section className="cardWrapper">
-          <FeatureCard isDark>
+          <FeatureCard isDark cardDaley={0.3}>
             <h4>{knowledgeheading1}</h4>
             <p>{knowledgeparagraph1}</p>
           </FeatureCard>
-          <FeatureCard isDark>
+          <FeatureCard isDark cardDaley={0.6}>
             <h4>{knowledgeheading2}</h4>
             <p>{knowledgeparagraph2}</p>
           </FeatureCard>
-          <FeatureCard isDark>
+          <FeatureCard isDark cardDaley={0.9}>
             <h4>{knowledgeheading3}</h4>
             <p>{knowledgeparagraph3}</p>
           </FeatureCard>
