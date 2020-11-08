@@ -59,6 +59,7 @@ const PricingWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
   @media (max-width: 540px) {
     flex-direction: column;
   }

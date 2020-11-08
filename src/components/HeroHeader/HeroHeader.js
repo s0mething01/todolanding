@@ -97,10 +97,13 @@ const HeroHeaderWrapper = styled.header`
     justify-content: flex-end;
   }
   @media (max-width: 450px) {
-    height: 700px;
+    height: 660px;
+  }
+  @media (max-width: 400px) {
+    height: 640px;
   }
   @media (max-width: 350px) {
-    height: 700px;
+    height: 615px;
   }
   .blob {
     position: absolute;
@@ -157,13 +160,13 @@ const HeroHeaderWrapper = styled.header`
       height: 350px;
     }
     @media (max-width: 400px) {
-      height: 340px;
+      height: 320px;
     }
     @media (max-width: 360px) {
-      height: 330px;
+      height: 315px;
     }
     @media (max-width: 350px) {
-      height: 320px;
+      height: 290px;
     }
   }
   .headerSvg {
@@ -204,13 +207,13 @@ const HeroHeaderWrapper = styled.header`
       transform: translate(50%, -50%);
     }
     @media (max-width: 450px) {
-      top: 27rem;
+      top: 190px;
     }
     @media (max-width: 400px) {
-      top: 23rem;
+      top: 180px;
     }
     @media (max-width: 350px) {
-      top: 21rem;
+      top: 155px;
     }
   }
   section {

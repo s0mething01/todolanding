@@ -21,7 +21,7 @@ const FeatureCard = ({ children, isDark, cardDaley }) => {
       opacity: 1,
       delay: cardDaley,
       y: 0,
-      duration: 1.2,
+      duration: 0.8,
       ease: 'power2.inOut',
       scrollTrigger: {
         trigger: sectionEl,
