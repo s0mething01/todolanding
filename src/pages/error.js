@@ -93,17 +93,17 @@ const HeroHeaderWrapper = styled.header`
     height: 240px;
   }
   @media (max-width: 540px) {
-    height: 790px;
+    height: 805px;
     justify-content: flex-end;
   }
   @media (max-width: 450px) {
-    height: 720px;
+    height: 735px;
   }
   @media (max-width: 400px) {
-    height: 790px;
+    height: 805px;
   }
   @media (max-width: 350px) {
-    height: 675px;
+    height: 690px;
   }
   .blob {
     position: absolute;
