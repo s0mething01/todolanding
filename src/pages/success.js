@@ -90,20 +90,20 @@ const HeroHeaderWrapper = styled.header`
     height: 260px;
   }
   @media (max-width: 600px) {
-    height: 240px;
+    height: 250px;
   }
   @media (max-width: 540px) {
-    height: 730px;
+    height: 770px;
     justify-content: flex-end;
   }
   @media (max-width: 450px) {
-    height: 660px;
+    height: 700px;
   }
   @media (max-width: 400px) {
-    height: 640px;
+    height: 680px;
   }
   @media (max-width: 350px) {
-    height: 615px;
+    height: 655px;
   }
   .blob {
     position: absolute;

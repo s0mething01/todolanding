@@ -21,8 +21,8 @@ const ErrorPage = () => {
   return (
     <HeroHeaderWrapper id="header" ref={hero}>
       <section>
-        <h1>Uups, nie znaleziono takiej strony...</h1>
-        <p>Kliknij w przycisk aby przejść na stornę główną!</p>
+        <h1>Uups, coś poszło nie tak...</h1>
+        <p>Spróbuj wysłać formularz jeszcze raz albo napisz do nas na facebooku!</p>
         <a href="/">
           <Button>Strona główna</Button>
         </a>
@@ -93,17 +93,17 @@ const HeroHeaderWrapper = styled.header`
     height: 240px;
   }
   @media (max-width: 540px) {
-    height: 730px;
+    height: 770px;
     justify-content: flex-end;
   }
   @media (max-width: 450px) {
-    height: 660px;
+    height: 700px;
   }
   @media (max-width: 400px) {
-    height: 640px;
+    height: 680px;
   }
   @media (max-width: 350px) {
-    height: 615px;
+    height: 655px;
   }
   .blob {
     position: absolute;
