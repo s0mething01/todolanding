@@ -145,15 +145,15 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
         fonts: {
           google: [
             {
-                family: `gatsby-plugin-webfonts`,
-                variants: [`300`, `400`, `700`, `900`],
-                subsets: [`latin-ext`],
-              },
+              family: `Overpass`,
+              variants: [`300`, `400`, `700`, `900`],
+              subsets: [`latin-ext`],
+            },
           ],
         },
       },
