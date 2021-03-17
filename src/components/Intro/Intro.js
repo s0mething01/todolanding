@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+
+import DatoContext from 'contexts/DatoContext';
 
 import Section from 'components/Section/Section';
 import Heading from 'components/Heading/Heading';
@@ -7,16 +9,12 @@ import Paragraph from 'components/Paragraph/Paragraph';
 import Button from 'components/Button/Button';
 
 const Intro = () => {
+  const { introheading, introparagraph } = useContext(DatoContext);
   return (
     <Section>
       <IntroWrapper>
-        <Heading isCentered>
-          Czym jest aplikacja ToDo <br /> I dla kogo będzie się idealnie sprawdzać
-        </Heading>
-        <Paragraph isCentered>
-          With ToDo app you will dive into the world of done house chores.With ToDo app you will dive into the world of done house chores.With ToDo app you will dive into the world of done house
-          chores.
-        </Paragraph>
+        <Heading isCentered>{introheading}</Heading>
+        <Paragraph isCentered>{introparagraph}</Paragraph>
         <Button isCentered>Zobacz Aplikacje</Button>
       </IntroWrapper>
     </Section>
