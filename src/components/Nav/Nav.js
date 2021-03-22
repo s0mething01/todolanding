@@ -56,7 +56,9 @@ const Nav = ({ theme }) => {
           </button>
         </li>
         <li className="special">
-          <a href="/">Aplikacji</a>
+          <a href="https://todofamilyapp.netlify.app" target="_blank" rel="noopener noreferrer">
+            Aplikacja
+          </a>
         </li>
       </ul>
     </NavContainer>
@@ -146,10 +148,10 @@ const NavContainer = styled.nav`
       li {
         margin: 2rem 0;
       }
-      li a{
+      li a {
         font-size: 3rem;
         padding: 2rem 3rem;
-        &.special a  {
+        &.special a {
           margin: 2rem 0 3rem;
         }
       }

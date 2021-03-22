@@ -104,7 +104,8 @@ const ContactFormWrapper = styled.form`
       label {
         color: ${({ theme }) => theme.colors.error};
       }
-      input, textarea {
+      input,
+      textarea {
         border-color: ${({ theme }) => theme.colors.error};
         color: ${({ theme }) => theme.colors.error};
       }
@@ -115,7 +116,7 @@ const ContactFormWrapper = styled.form`
       height: 4rem;
       flex-shrink: 0;
       display: block;
-      transition: .2s;
+      transition: 0.2s;
       &.filled span {
         transform: scale(0.75) translateY(-60%);
         transform-origin: 0% 0%;
@@ -145,7 +146,7 @@ const ContactFormWrapper = styled.form`
       height: 4rem;
       margin-top: 1.5rem;
       line-height: 4rem;
-      transition: .2s;
+      transition: 0.2s;
       &:focus {
         outline: none;
       }
